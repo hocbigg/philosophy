@@ -1,294 +1,250 @@
+<div align="center" style="text-align: center">
+<img src="images/logo.webp" alt=""/>
+<h3>Hocbigg - Philosophy</h3>
+<p>
 Path to a free self-taught education in Philosophy!
+</p>
+</div>
 
+# Contents
 
-# Introduction
+- [Summary](#summary)
+- [Curriculum](#curriculum)
+- [Code of conduct](#code-of-conduct)
 
-## Purpose
+# Summary
 
-This curriculum try to give a **well-rounded foundation equivalent to a 4-year undergraduate major** (excluding general-ed), organized for **1–2 years at ~20 hours/week**.
+The Philosophy curriculum is a **complete education in Philosophy** using online materials.
 
-## **Philosophy of the program.**
+This curriculum provides a complete, self-paced education in **Philosophy**, equivalent in coverage and rigor to a 4-year undergraduate major (minus general-education requirements). You’ll develop competence across the major philosophical subfields—logic, ethics, epistemology, metaphysics, political philosophy, and the history of philosophy—while also training core skills: close reading, analytical writing, argument reconstruction, conceptual analysis, and research methods.
 
-Philosophy trains careful thinking: conceptual clarity, argument construction, textual interpretation, and the ability to apply abstract ideas to practical and scientific problems. The curriculum balances **historical breadth (Plato → Kant → analytic/post-analytic)** with **tool-building (logic, formal methods)** and **applied areas (ethics, philosophy of mind, science, tech ethics)**. MIT OCW supplies stable, open course material; MOOCs supply structured peer interaction and capstone options.
+When there are courses or books that don't fit into the curriculum but are otherwise of high quality,
+they belong in [extras/courses](extras/courses.md) or [extras/readings](extras/readings.md).
 
 ## Organization
 
-- **Intro (Orientation & fundamentals)** — test fit, build study habits, learn close reading & basic argumentation.
-- **Core (roughly first 3 years of a major)** — logic, epistemology, metaphysics, ethics, political philosophy, history of philosophy, philosophy of mind, philosophy of science, and methods.
-- **Advanced (final-year electives)** — choose **one specialization** (e.g., Ethics & Moral Psychology; Epistemology & Philosophy of Science; History of Philosophy; Logic & Computation). Complete all advanced courses in one track to develop depth.
-- **Final Project (Capstone)** — sustained research/argument project (essay thesis, literature survey + original argument, or applied ethics case study) with peer review and public sharing.
+* **Intro to Philosophy**: Orientation, study habits, and broad exposure.
+* **Core Philosophy**: Foundational courses covering the history of philosophy, formal logic, ethics, metaphysics, epistemology, and political philosophy.
+* **Advanced Philosophy**: Final-year style electives organized into specialization tracks.
+* **Capstone Project**: A substantial research paper or philosophical project demonstrating mastery.
 
-## Duration
+**Duration**. **1–2 years**, assuming **~20 hours/week**. Learners may speed up or slow down.
 
-**1–2 years** recommended. Pace set to **~20 hours/week** so the learner can finish in 1 year (intensive) or 2 years (sustainable). The program is organized into _Orientation (6–8 wks)_ → _Core (12–14 months)_ → _Advanced (3–4 months)_ → _Capstone (8–12 wks)_.
 
-# TL;DR:
+**Process**. Students can work through the curriculum alone or in groups, in order or out of order.
 
-*Study all subjects below, in roughly the presented order*.
+- We recommend doing all courses in **Core**, only skipping a course when you are certain that you've already learned the material previously.
+- For simplicity, we recommend working through courses (especially Core) in order from top to bottom. Some students choose to study multiple courses at a time in order to vary the material they are working on in a day/week. A popular option is to take the math courses in parallel with the introductory courses. Course prerequisites are listed to help you determine if you are prepared for a given course.
+- Courses in Advanced are electives. Choose one subject (e.g. ) you want to become an expert in and take all the courses under that heading.
 
-| Course name | Platform | Link | Workload (hrs/wk) | Prerequisites | Assessment type |
-| --- | :---: | --- | --: | --- | --- |
-| Problems of Philosophy | MIT OCW | [https://ocw.mit.edu/courses/24-00-problems-of-philosophy-fall-2019/](https://ocw.mit.edu/courses/24-00-problems-of-philosophy-fall-2019/) ([MIT OpenCourseWare][2]) | 6–8 | None | Essays, reading responses |
-| Logic I | MIT OCW | [https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) ([MIT OpenCourseWare][3]) | 6–8 | None | Problem sets, translations |
-| Classics of Western Philosophy | MIT OCW | [https://ocw.mit.edu/courses/24-01-classics-of-western-philosophy-spring-2016/](https://ocw.mit.edu/courses/24-01-classics-of-western-philosophy-spring-2016/) ([MIT OpenCourseWare][6]) | 6–8 | None | Close-reading essays |
-| Minds & Machines | MIT OCW | [https://ocw.mit.edu/courses/24-09-minds-and-machines-fall-2011/](https://ocw.mit.edu/courses/24-09-minds-and-machines-fall-2011/) ([MIT OpenCourseWare][9]) | 6–8 | Intro | Essays, problems |
-| Ethics | MIT OCW | [https://ocw.mit.edu/courses/24-231-ethics-fall-2009/](https://ocw.mit.edu/courses/24-231-ethics-fall-2009/) ([MIT OpenCourseWare][7]) | 6–8 | Intro | Papers, responses |
-| Meta-ethics | MIT OCW | [https://ocw.mit.edu/courses/24-230-meta-ethics-fall-2015/](https://ocw.mit.edu/courses/24-230-meta-ethics-fall-2015/) ([MIT OpenCourseWare][8]) | 6–8 | Ethics recommended | Papers |
-| Philosophy of Brain Science | MIT OCW | [https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/](https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/) ([MIT OpenCourseWare][10]) | 6–8 | Intro to mind | Essays, exercises |
-| Ethics of Technology | MIT OCW | [https://ocw.mit.edu/courses/24-131-ethics-of-technology-spring-2023/](https://ocw.mit.edu/courses/24-131-ethics-of-technology-spring-2023/) ([MIT OpenCourseWare][11]) | 4–6 | Ethics | Case memos |
-| Intro to Philosophy | Coursera | [https://www.coursera.org/learn/philosophy](https://www.coursera.org/learn/philosophy) ([Coursera][4]) | 4–6 | None | Quizzes, essays, forums |
+**[How to contribute](CONTRIBUTING.md)**
 
 # Curriculum
 
-## Intro (Orientation & fundamentals) — 6–8 weeks
+## Intro Philosophy (Orientation & Foundations)
 
-| Courses | Duration | Effort | Prerequisites | Notes |
-| --- | :---: | --: | --- | --- |
-| [Problems of Philosophy (24.00)](https://ocw.mit.edu/courses/24-00-problems-of-philosophy-fall-2019/) (MIT OCW). ([MIT OpenCourseWare][2]) | 6 wks | 8–10 hrs/wk | None | Short selection approach to core problems (knowledge, mind, ethics). Good first course to test fit. |
-| [Logic I (24.241) — Intro to Formal Logic](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW). ([MIT OpenCourseWare][3]) | 6 wks | 6–8 hrs/wk | None | Fundamental tools: validity, truth-tables, translations, basic predicate logic. Essential early. |
-| Coursera: [Introduction to Philosophy — University of Edinburgh](https://www.coursera.org/learn/philosophy) (MOOC). ([Coursera][4]) | Self-paced | 4–6 hrs/wk | None | Friendly broad intro covering epistemology, ethics, mind, metaphysics — useful as companion to MIT OCW material. |
+These courses test your interest, build study habits, and provide the conceptual on-ramp.
 
-**Why these first?** Problems of Philosophy (MIT OCW) and an introductory logic course give immediate practice in reading arguments and building them. The Coursera intro provides structured modules and forums for peer discussion.
+### Introductory Courses Table
 
-## Core (Foundational modules — 12–14 months)
 
-Take these modules across ~12 months (concurrent in pairs/triples). OCW provides most materials; MOOCs are recommended for structure/certificates.
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Introduction to Philosophy (University of Edinburgh, Coursera)](https://www.coursera.org/learn/philosophy) | 6 weeks | 4–6 hr/wk | none | Great broad entry point
+[Justice (Harvard)](https://pll.harvard.edu/course/justice) | 12 weeks | 3–6 hr/wk | none | Canonical intro to political philosophy & moral reasoning
+[Philosophy and the Science of Human Nature (Yale OYC)](https://oyc.yale.edu/philosophy-and-psychology/phil-181) | 24 lectures | ~6 hr/wk | none | Interdisciplinary taste of ethics, psychology, game theory
 
-### A. Logic & Methods
 
-| Courses | Duration | Effort | Prerequisites | Notes |
-| --- | :---: | :---: | --- | --- |
-| [Logic I](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW). ([MIT OpenCourseWare][3]) | 8–10 wks | 6–8 hrs/wk | Orientation logic | Formal reasoning, sentential & predicate logic, proofs. Assessments: problem sets, translation exercises. |
-| [Logic II (24.242) — Computability & Gödel](https://ocw.mit.edu/courses/24-242-logic-ii-spring-2004/) (MIT OCW). ([MIT OpenCourseWare][5]) | 8 wks | 6–8 hrs/wk | Logic I recommended | Advanced topics: computability, incompleteness. Good if you want analytic rigor. |
+## Core Philosophy
 
-**Why:** Logic is the philosopher’s toolset. OCW Logic I is thorough and free.
+This is the backbone of the major. Courses are ordered to provide logical progression; prerequisites are noted.
 
-### B. Epistemology & Metaphysics
+### A. Logic & Critical Thinking
 
-| Courses | Duration | Effort | Prerequisites | Notes |
-| --- | --: | :---: | --- | --- |
-| [Problems of Philosophy (24.00)](https://ocw.mit.edu/courses/24-00-problems-of-philosophy-fall-2019/) (MIT OCW). ([MIT OpenCourseWare][2]) | 8–10 wks | 6–8 hrs/wk | Intro | Epistemology & metaphysics readings, essays. Assessments: essays, short exams. |
-| [Classics of Western Philosophy (24.01)](https://ocw.mit.edu/courses/24-01-classics-of-western-philosophy-spring-2016/) (MIT OCW). ([MIT OpenCourseWare][6]) | 10–12 wks | 6–8 hrs/wk | None | Historical grounding: Plato, Aristotle, Descartes, Hume, Kant. Close textual work & essays. |
 
-### C. Ethics & Political Philosophy
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Introduction to Logic (Stanford Online / Coursera)](https://www.coursera.org/learn/logic-introduction) | 10 weeks | 4–8 hr/wk | none | Symbolic logic: syntax, semantics, proofs
+[Logic: Language and Information (Stanford Online)](https://online.stanford.edu/courses/sohs-ylil) | self-paced | 5–8 hr/wk | Intro Logic | Strengthens formal reasoning
 
-| Courses | Duration | Effort | Prerequisites | Notes |
-| --- | :---: | :---: | --- | --- |
-| [Ethics (24.231)](https://ocw.mit.edu/courses/24-231-ethics-fall-2009/) (MIT OCW). ([MIT OpenCourseWare][7]) | 8–10 wks | 6–8 hrs/wk | Intro | Metaethics + normative ethics treatments. Assessments: papers, reading responses. |
-| [Meta-ethics (24.230)](https://ocw.mit.edu/courses/24-230-meta-ethics-fall-2015/) (MIT OCW). ([MIT OpenCourseWare][8]) | 6–8 wks | 6–8 hrs/wk | Intro ethics recommended | Deep dive into foundations of moral claims. |
-| Coursera / edX backup: _Justice_ (HarvardX / Michael Sandel) or _Moralities of Everyday Life_ (Yale/Coursera) — for applied political ethics. | Self-paced | 4–6 hrs/wk | None | Good for political philosophy and public issues. |
 
-### D. Philosophy of Mind & Cognitive Science
+If you want more rigor, supplement with:
 
-| Courses | Duration | Effort | Prerequisites | Notes |
-| --- | :---: | :---: | --- | --- |
-| [Minds and Machines (24.09)](https://ocw.mit.edu/courses/24-09-minds-and-machines-fall-2011/) (MIT OCW). ([MIT OpenCourseWare][9]) | 8–10 wks | 6–8 hrs/wk | Intro logic recommended | Intro to central issues in philosophy of mind. Readings, problem sets, essays. |
-| [Philosophical Issues in Brain Science (24.08J)](https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/) (MIT OCW). ([MIT OpenCourseWare][10]) | 8–10 wks | 6–8 hrs/wk | Intro to mind/philosophy | Bridges empirical work & philosophy. |
+* **Authoritative textbook (paid):** *Language, Proof and Logic* (Barwise & Etchemendy).
+* **Free alternative:** *forall x* (Magnus) — an excellent open logic text.
 
-### E. Philosophy of Science & Methods
+### B. Ancient Philosophy
 
-| Courses | Duration | Effort | Prerequisites | Notes |
-| --- | :---: | :---: | --- | --- |
-| [Problems of Philosophy](https://ocw.mit.edu/courses/24-00-problems-of-philosophy-fall-2019/) (MIT OCW) — includes philosophy of science modules. ([MIT OpenCourseWare][2]) | 6–8 wks | 4–6 hrs/wk | None | Conceptual foundations of scientific reasoning. |
-| [Ethics of Technology (24.131)](https://ocw.mit.edu/courses/24-131-ethics-of-technology-spring-2023/) (MIT OCW). ([MIT OpenCourseWare][11]) | 6–8 wks | 4–6 hrs/wk | Intro ethics | Applied ethics for technological contexts (AI, surveillance, bias). Great applied module. |
 
-### F. History & Textual Work
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Ancient Greek Philosophy (MIT OCW)](https://ocw.mit.edu/courses/24-200-ancient-greek-philosophy-fall-2004/) | self-paced | 6–8 hr/wk | none | Plato, Aristotle, Pre-Socratics
 
-| Courses | Duration | Effort | Prerequisites | Notes |
-| --- | --: | :---: | --- | --- |
-| [Classics of Western Philosophy (24.01)](https://ocw.mit.edu/courses/24-01-classics-of-western-philosophy-spring-2016/) (MIT OCW). ([MIT OpenCourseWare][6]) | 10–12 wks | 6–8 hrs/wk | None | Close reading of canonical texts; essential for historical grounding. |
 
-## Advanced (Choose one specialization — final year depth, 3–4 months)
+### C. Early Modern Philosophy
 
-Pick **one** advanced track (complete its set of courses):
 
-### Track 1 — **Ethics & Moral Psychology**
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[The Early Modern Philosophers (Yale OYC: PHIL 176)](https://oyc.yale.edu/philosophy/phil-176) | 24 lectures | 6–8 hr/wk | Ancient | Descartes → Hume → Kant foundations
 
-- [Meta-ethics (24.230)](https://ocw.mit.edu/courses/24-230-meta-ethics-fall-2015/). ([MIT OpenCourseWare][8])
-- [Moral Psychology (24.120 / 24.220)](https://ocw.mit.edu/courses/24-120-moral-psychology-spring-2009/) (and the 2024 updated page). ([MIT OpenCourseWare][12])
-- Capstone emphasis: an original case study in applied ethics (AI, bioethics, or political ethics).
 
-### Track 2 — **Epistemology & Philosophy of Science**
+### D. Ethics (Normative & Applied)
 
-- Problems of Philosophy (epistemology modules). ([MIT OpenCourseWare][2])
-- Philosophy of Science modules (use OCW readings + Coursera backups on philosophy/science).
-- Capstone: literature review + original argument on a contemporary epistemic issue (e.g., testimony, social epistemology, epistemic injustice).
 
-### Track 3 — **Philosophy of Mind & Cognitive Science**
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Moralities of Everyday Life (Yale / Coursera)](https://www.coursera.org/learn/moralities) | 6 weeks | 6–8 hr/wk | none | Moral psychology + ethics
+[Ethics (MIT OCW 24.230)](https://ocw.mit.edu/courses/24-230-ethics-fall-2009/) | self-paced | 6–8 hr/wk | Intro Philosophy | Covers utilitarianism, deontology, virtue ethics
 
-- Minds and Machines; Philosophical Issues in Brain Science. ([MIT OpenCourseWare][9])
-- Suggested MOOC backup: cognitive science or neuroscience fundamentals on Coursera/edX.
-- Capstone: argumentative paper connecting empirical literature and conceptual analysis.
 
-### Track 4 — **Logic & Computation**
+### E. Epistemology
 
-- Logic I & II (including Gödel, computability). ([MIT OpenCourseWare][3])
-- Optional: courses on formal semantics or related CS logic (MIT OCW / Stanford Online).
-- Capstone: formal proof project or philosophical paper on logic/semantics.
 
-## Final Project (Capstone) — 8–12 weeks
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Epistemology (MIT OCW 24.221)](https://ocw.mit.edu/courses/24-221-epistemology-fall-2010/) | self-paced | 6–8 hr/wk | Intro Logic helpful | Knowledge, justification, skepticism
 
-**Options:**
 
-- A 8,000–12,000 word research thesis (philosophical paper) defending an original argument; **or**
-- A sustained literature review + critical synthesis (12–15k words) with a clear original contribution; **or**
-- An applied ethics dossier (case analysis, policy recommendations, argumentative defense).
+### F. Metaphysics
 
-**Milestones**
 
-- **Proposal (week 0–1):** 500–800 word proposal with research questions, key literature, method, and timeline.
-- **Annotated Bibliography (wk 2–3):** 15–25 sources with 150–250 word annotations.
-- **First Draft (wk 5–6):** 50% complete submission for peer review.
-- **Revised Draft (wk 9):** near-final submission with revision log.
-- **Final Deliverable (wk 12):** final paper + 1,000-1,500 word reflective artist’s statement and a 10-minute recorded defense.
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Metaphysics (MIT OCW 24.251)](https://ocw.mit.edu/courses/24-251-metaphysics-fall-2009/) | self-paced | 6–8 hr/wk | Logic, Intro Phil | Identity, universals, causation, time
 
-**Capstone Rubric (100 points)**
 
-- **Argumentative Quality (30):** clarity, structure, logical coherence.
-- **Philosophical Depth (25):** engagement with literature, conceptual subtlety.
-- **Originality (15):** novelty of position or approach.
-- **Method & Evidence (15):** correct use of empirical or textual evidence if applicable.
-- **Presentation & Scholarship (10):** citations, formatting, readability, and revision log.
+### G. Political Philosophy
 
-**Peer Review Process**
 
-- Form groups of 3–5; each member reads two drafts and provides structured feedback (3 strengths + 3 suggestions). Use Coursera/edX forums or Discord/Slack groups for exchanges.
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Introduction to Political Philosophy (Yale OYC: PL SC 179)](https://oyc.yale.edu/political-science/plsc-114) | 24 lectures | ~6 hr/wk | none | Hobbes, Locke, Rousseau, Kant, Mill
 
-# 2) Plan & sequencing — semester roadmap & prerequisite graph
 
-## Roadmap (1-year intensive / 2-year sustainable)
+### H. Philosophy of Mind
 
-**Fast (1 year)** — 4 terms (~13 weeks each) at ~20 hrs/wk:
 
-- **Term 1 (Orientation + Foundations)**: Problems of Philosophy (OCW) + Logic I (OCW) + Coursera Intro to Philosophy.
-- **Term 2 (Core breadth)**: Classics of Western Philosophy (OCW) + Ethics (OCW) + Philosophy of Mind (Minds & Machines OCW).
-- **Term 3 (Methods & Applied)**: Logic II (if chosen) or Philosophy of Science modules + Ethics of Technology (OCW) + Moral Psychology (OCW).
-- **Term 4 (Advanced + Capstone)**: Choose specialization courses (advanced track) + Capstone research & defense.
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--:
+[Philosophy of Mind (MIT OCW 24.09)](https://ocw.mit.edu/courses/24-09-minds-and-machines-spring-2011/) | self-paced | 6–8 hr/wk | Logic | Consciousness, intentionality, AI, computation
 
-**Sustainable (2 years)** — same sequence but spread with extra time for deeper reading, more peer review, optional MOOCs for certificates.
 
-## Prerequisite graph (plain text)
+### I. Philosophy of Science
 
-- **Intro (no prereq)** → _Logic I_ recommended early.
-- **Logic I** → enables _Logic II_ and improves performance in epistemology/metaphysics.
-- **Problems of Philosophy / Classics** → foundation for Ethics, Epistemology, Metaphysics, Philosophy of Mind.
-- **Ethics** → metaethics & applied ethics modules.
-- **Minds and Machines** → better if you’ve done _Problems of Philosophy_ and some logic, but not strictly required.
 
-(Visual graph you can sketch: Intro courses at top, arrows to Logic I and Classics, feeding into specialized courses.)
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Philosophy of Science (University of Pennsylvania)](https://www.coursera.org/learn/philosophy-of-science) | 6 weeks | 6–8 hr/wk | none | Scientific explanation, realism, models
 
-## Course entries (detailed; includes why, topics, workload, assessments)
 
-I provide the most important course entries below with links (OCW first). For each: why included, key topics, workload estimate, main assessments.
+### J. Philosophy of Language (Advanced Core)
 
-### A. [Problems of Philosophy (24.00)](https://ocw.mit.edu/courses/24-00-problems-of-philosophy-fall-2019/) (MIT OCW). ([MIT OpenCourseWare][2])
 
-- **Why:** Systematic introduction to core problems (knowledge, metaphysics, ethics). Open & stable OCW content used heavily in core.
-- **Key topics:** epistemology, metaphysics, free will, personal identity, philosophy of language.
-- **Workload:** 6–8 hrs/wk.
-- **Assessments:** reading responses, short essays (assignments provided on OCW).
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Philosophy of Language (MIT OCW 24.251)](https://ocw.mit.edu/courses/24-251-philosophy-of-language-spring-2012/) | self-paced | 6–8 hr/wk | Logic | Reference, meaning, pragmatics
 
-### B. [Logic I (24.241)](https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/) (MIT OCW). ([MIT OpenCourseWare][3])
 
-- **Why:** Essential formal reasoning skills.
-- **Key topics:** propositional logic, predicate logic, proofs, soundness/completeness basics.
-- **Workload:** 6–8 hrs/wk (problem sets).
-- **Assessments:** problem sets, translation exercises, quizzes (OCW includes assignments & solutions).
 
-### C. [Classics of Western Philosophy (24.01)](https://ocw.mit.edu/courses/24-01-classics-of-western-philosophy-spring-2016/) (MIT OCW). ([MIT OpenCourseWare][6])
 
-- **Why:** Historical breadth; reading primary texts is indispensable.
-- **Workload:** 6–8 hrs/wk.
-- **Assessments:** close-reading essays, presentations.
+## Advanced Tracks
 
-### D. [Minds & Machines (24.09)](https://ocw.mit.edu/courses/24-09-minds-and-machines-fall-2011/) (MIT OCW). ([MIT OpenCourseWare][9])
+These are the advanced electives equivalent to upper-division seminars. Courses are all open. You may take more than one, but choose one for focus.
 
-- **Why:** Strong introduction to philosophy of mind with lecture notes & assignments.
-- **Key topics:** dualism, functionalism, consciousness, computational theory of mind.
-- **Workload:** 6–8 hrs/wk.
-- **Assessments:** essays, problem sets.
+### 1. Ethics & Political Philosophy
 
-### E. [Ethics (24.231)](https://ocw.mit.edu/courses/24-231-ethics-fall-2009/) (MIT OCW). ([MIT OpenCourseWare][7])
+Deep understanding of value theory, moral agency, justice, and political legitimacy.
 
-- **Why:** Good mix of metaethics & normative ethics with seminar style readings.
-- **Workload:** 6–8 hrs/wk.
-- **Assessments:** papers, reading responses.
+Recommended courses:
 
-### F. [Philosophical Issues in Brain Science (24.08J)](https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/) (MIT OCW). ([MIT OpenCourseWare][10])
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Bioethics: Law, Medicine, and Ethics of Reproductive Technologies (Harvard)](https://pll.harvard.edu/course/bioethics) | 10–12 weeks | 4–6 hr/wk | Ethics | Applied ethics
+[The Moral Leader (Harvard)](https://pll.harvard.edu/course/moral-leader) | 10–12 weeks | 4–6 hr/wk | none | Ethics via literature
+[Classical Sociological Theory (MIT OCW)](https://ocw.mit.edu/courses/21a-211-classical-sociological-theory-fall-2018/) | self-paced | 6–8 hr/wk | none | Helpful background for political theory
 
-- **Why:** Bridges empirical neuroscience and philosophy.
-- **Workload:** 6–8 hrs/wk.
-- **Assessments:** essays, problem exercises.
 
-### G. [Ethics of Technology (24.131)](https://ocw.mit.edu/courses/24-131-ethics-of-technology-spring-2023/) (MIT OCW). ([MIT OpenCourseWare][11])
+### 2. Metaphysics & Epistemology (M&E)
 
-- **Why:** Contemporary, applied ethics for technology — highly relevant and recent OCW offering.
-- **Workload:** 4–6 hrs/wk.
-- **Assessments:** policy memos, case analyses.
+Deeper engagement with analytic problems about reality and knowledge.
 
-### H. Coursera: [Introduction to Philosophy — University of Edinburgh](https://www.coursera.org/learn/philosophy) (MOOC). ([Coursera][4])
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Paradox and Infinity (MIT OCW)](https://ocw.mit.edu/courses/24-118-paradox-and-infinity-spring-2018/) | self-paced | 6–8 hr/wk | Logic | Set theory, infinity, paradoxes
+[Metaphysics: Free Will (MIT OCW 24.221)](https://ocw.mit.edu/courses/24-221-metametaphysics-spring-2015/) | self-paced | 6–8 hr/wk | Metaphysics | Freedom, determinism
 
-- **Why:** Structured MOOC with quizzes & discussion forums; good complement to OCW materials.
-- **Workload:** 4–6 hrs/wk.
-- **Assessments:** quizzes, forum participation, short essays.
 
-# 3) Alternatives & resilience
+Textbooks:
 
-**Backup options (1–2 per key course):**
+* **Authoritative:** *Metaphysics* (van Inwagen & Sullivan)
+* **Free alternative:** Stanford Encyclopedia of Philosophy (SEP) topic readings
 
-- **Problems of Philosophy** (backup): Coursera _Introduction to Philosophy_ (University of Edinburgh). ([Coursera][4])
-- **Logic I** (backup): _Introduction to Logic_ MOOC on Coursera (often from Stanford/UCLA), or MIT OCW companion materials from other semesters. (Search Coursera logic). ([Coursera][13])
-- **Classics** (backup): Great Books or HarvardX modules on classical texts (edX/Harvard).
-- **Philosophy of Mind** (backup): Coursera offerings in cognitive science; edX _Philosophy of Mind_ courses from other universities.
-- **Ethics of Technology** (backup): Coursera/edX courses in tech ethics (e.g., "AI Ethics" courses).
+### 3. Philosophy of Science & Mind
 
-**Catch-up modules for gaps**
+**Goal:** Position philosophical inquiry within cognitive science, AI, and the sciences.
 
-- **Writing & research methods:** edX / Coursera academic writing courses (e.g., _English for Research_ or _Academic Writing_). These help with essay structure and citation.
-- **Math / formal methods (if needed):** Short logic and discrete math refresher modules (Coursera). Logic II covers necessary formal foundations.
-- **Philosophical vocabulary & secondary literature:** Stanford Encyclopedia of Philosophy (free) — invaluable for background. (SEP not linked here but widely available.)
 
-**Notes on auditing & free access**
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[The Cognitive Neuron (Harvard / edX)](https://pll.harvard.edu/course/cognitive-neuron) | 8 weeks | 6–8 hr/wk | none | Neuroscience grounding
+[Computational Neuroscience (Coursera)](https://www.coursera.org/learn/computational-neuroscience) | 10 weeks | 6–8 hr/wk | none | Strong sci grounding
+[Philosophy of Cognitive Science (Textbook)] | — | — | Mind | Textbook-based seminar
 
-- **MIT OCW**: always free; download lecture notes, readings, assignments. ([MIT OpenCourseWare][1])
-- **Coursera/edX**: most content can be **audited** free (videos & readings). Peer-graded assignments and certificates often require payment; you can simulate peer review with a study group. ([Coursera][4])
 
+Textbook:
 
+* **Authoritative:** *The Oxford Handbook of Philosophy of Cognitive Science*
+* **Free alternative:** SEP cognitive science entries + MIT OCW neuroscience courses.
 
-# Textbooks & readings (when no course meets a need)
+### 4. History of Philosophy (Ancient → Modern → 19th/20th Century)
 
-**Logic / formal methods**
+**Goal:** Build a historian-of-philosophy lens.
 
-1. _Language, Proof and Logic_ — Jon Barwise & John Etchemendy (authoritative, paid).
-2. Free alternative: _Open Logic Project_ (open).
 
-**Intro & history**
+Courses | Duration | Effort | Prerequisites | Notes
+:-- | :--: | :--: | :--: | :--
+[Nietzsche, Wittgenstein, and Heidegger (MIT OCW)](https://ocw.mit.edu/courses/24-230-ethical-theory-fall-2004/) | self-paced | 6–8 hr/wk | Early Modern | 19th/20th C thought
+[Existentialism in Literature & Film (MIT OCW)](https://ocw.mit.edu/courses/24-02m-existentialism-fall-2015/) | self-paced | 6–8 hr/wk | none | Sartre, Camus, Kierkegaard
 
-1. _The Problems of Philosophy_ — Bertrand Russell (classic, short).
-2. _A History of Western Philosophy_ — Bertrand Russell (broad overview; paid).
-3. Free alternatives: selected texts on MIT OCW + Stanford Encyclopedia.
 
-**Ethics**
+Supplement textbooks:
 
-1. _The Elements of Moral Philosophy_ — James Rachels (authoritative undergraduate text).
-2. Free alternatives: selected articles and OCW reading lists.
+* **Authoritative:** *A History of Western Philosophy* (Kenny)
+* **Free alternative:** Internet Encyclopedia of Philosophy (IEP).
 
-**Philosophy of Mind**
+## Final Project (Capstone)
 
-1. _Philosophy of Mind: A Contemporary Introduction_ — David J. Chalmers (or Jaegwon Kim for traditional treatments).
-2. Free alternative: OCW lecture notes + SEP entries.
+A capstone demonstrates mastery through a substantial scholarly contribution. This project is your equivalent of a senior thesis.
 
+### Requirements
 
-[1]: https://ocw.mit.edu/?utm_source=chatgpt.com "MIT OpenCourseWare | Free Online Course Materials"
-[2]: https://ocw.mit.edu/courses/24-00-problems-of-philosophy-fall-2019/?utm_source=chatgpt.com "Problems of Philosophy | Linguistics and ..."
-[3]: https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/?utm_source=chatgpt.com "Logic I | Linguistics and Philosophy"
-[4]: https://www.coursera.org/learn/philosophy?utm_source=chatgpt.com "Introduction to Philosophy"
-[5]: https://ocw.mit.edu/courses/24-242-logic-ii-spring-2004/?utm_source=chatgpt.com "Logic II | Linguistics and Philosophy"
-[6]: https://ocw.mit.edu/courses/24-01-classics-of-western-philosophy-spring-2016/?utm_source=chatgpt.com "Classics of Western Philosophy"
-[7]: https://ocw.mit.edu/courses/24-231-ethics-fall-2009/?utm_source=chatgpt.com "Ethics | Linguistics and Philosophy"
-[8]: https://ocw.mit.edu/courses/24-230-meta-ethics-fall-2015/?utm_source=chatgpt.com "Meta-ethics | Linguistics and Philosophy"
-[9]: https://ocw.mit.edu/courses/24-09-minds-and-machines-fall-2011/?utm_source=chatgpt.com "Minds and Machines | Linguistics and Philosophy"
-[10]: https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/?utm_source=chatgpt.com "Philosophical Issues in Brain Science"
-[11]: https://ocw.mit.edu/courses/24-131-ethics-of-technology-spring-2023/?utm_source=chatgpt.com "Ethics of Technology | Linguistics and Philosophy"
-[12]: https://ocw.mit.edu/courses/24-120-moral-psychology-spring-2009/?utm_source=chatgpt.com "Moral Psychology | Linguistics and Philosophy"
-[13]: https://www.coursera.org/courses?query=philosophy&topic=Arts+and+Humanities&utm_source=chatgpt.com "Best Philosophy Courses & Certificates [2025]"
+* **Length:** 4,000–8,000 words.
+* **Form:** Research paper, extended argumentative essay, or philosophical analysis of a specific topic.
+* **Sources:** At least 8–12 academic sources (SEP, primary texts, journal articles).
+* **Originality:** Must advance a clear thesis, reconstruct arguments faithfully, and engage objections.
+* **Process documentation:** Include research notes, reading summaries, and a revision log.
+
+### Suggested Capstone Themes
+
+* **Ethics:** “Is moral realism defensible?”
+* **Epistemology:** “Can Bayesianism resolve the problem of induction?”
+* **Metaphysics:** “Are persons identical to their brains?”
+* **Philosophy of Mind:** “Is consciousness computational?”
+* **Political Philosophy:** “Is Rawlsian justice compatible with libertarian self-ownership?”
+* **History of Philosophy:** “What remains of Kant’s synthetic a priori?”
+
+
+## Congratulations
+
+After completing the requirements of the curriculum above,
+you will have completed the equivalent of a full bachelor's degree in Philosophy.
+
+Congratulations!
+
+![keep learning](images/keep-learning.webp)
+
+# Code of conduct
+
+[Hocbigg's code of conduct](https://github.com/hocbigg/code-of-conduct).
+
