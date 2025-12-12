@@ -87,6 +87,7 @@ or that there was an alternative that fit better into the curriculum.
 
 ## Online Learning - Great Courses
 
+
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn) | 4 weeks | 2 hours/week
