@@ -4,7 +4,6 @@ This is a list of high-quality courses that, for one reason or another, didn't m
 The most common reasons are that the course isn't available often enough,
 or that there was an alternative that fit better into the curriculum.
 
-
 ## Ancient Philosophy
 
 | Courses | Duration | Effort |
@@ -84,7 +83,7 @@ or that there was an alternative that fit better into the curriculum.
 | [Philosophy of Mathematics (YouTube – Stewart Shapiro, OSU)](https://www.youtube.com/results?search_query=stewart+shapiro+philosophy+of+mathematics) | varies | self-paced |
 
 
-## Online Learning - Great Courses
+### Online Learning - Great Courses
 
 Courses | Duration | Effort
 :-- | :--: | :--:
