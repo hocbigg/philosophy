@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hocbigg.github.io/philosophy/sitemap.xml
