@@ -1,92 +1,45 @@
 # Great Courses
 
-This is a list of high-quality courses that, for one reason or another, didn't make it into the curriculum.
-The most common reasons are that the course isn't available often enough,
-or that there was an alternative that fit better into the curriculum.
+A curated directory of full-length university lectures, high-production open courseware, and comprehensive audio-visual lecture series for exploring philosophy beyond standard survey curricula.
 
-## Ancient Philosophy
+- [Historical Deep-Dives and Major Philosophers](#historical-deep-dives-and-major-philosophers)
+- [Mind, Language, and Cognitive Science](#mind-language-and-cognitive-science)
+- [Logic, Formal Methods, and Epistemology](#logic-formal-methods-and-epistemology)
+- [Ethics, Justice, and Political Philosophy](#ethics-justice-and-political-philosophy)
+- [Philosophy of Science, Religion, and Aesthetics](#philosophy-of-science-religion-and-aesthetics)
 
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [Introduction to Ancient Greek Philosophy (Yale OYC – PHIL 201)](https://oyc.yale.edu/classics/clcv-205) | 24 lectures | ~6 hr/wk |
-| [Plato’s Republic (MIT OCW 24.231)](https://ocw.mit.edu/courses/24-231-philosophy-of-platos-republic-fall-2006/) | self-paced | 6–8 hr/wk |
-| [Aristotle: Metaphysics (YouTube – Harvard/Howard lectures)](https://www.youtube.com/results?search_query=aristotle+metaphysics+lecture+series) | varies | varies |
+## Historical Deep-Dives and Major Philosophers
 
+- [A History of Philosophy (Wheaton College / Prof. Arthur Holmes)](https://www.youtube.com/playlist?list=PL9GwT4_YRZdBf9nIUHs0zjrnUVl-KBNSM)
+- [Kant’s Critique of Pure Reason (University of Oxford / Prof. Daniel N. Robinson)](https://podcasts.ox.ac.uk/series/kants-critique-pure-reason)
+- [Death (Open Yale Courses – PHIL 176 / Prof. Shelly Kagan)](https://oyc.yale.edu/philosophy/phil-176)
+- [Philosophy 185: Heidegger's Being and Time (UC Berkeley / Prof. Hubert Dreyfus / Internet Archive)](https://archive.org/details/Philosophy_185_Fall_2007_UC_Berkeley)
+- [The Self Under Siege: Philosophy in the Twentieth Century (Duke University / Prof. Rick Roderick)](https://www.youtube.com/playlist?list=PLA34681B9BE88F5AA)
 
-## Early Modern & Enlightenment
+## Mind, Language, and Cognitive Science
 
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [Kant’s Critique of Pure Reason (YouTube – Oxford, Dan Robinson series)](https://www.youtube.com/watch?v=fP7WvI3i5nE&list=PLR5A0t6_2xplpW4W2I0hLjVQPhR9ykVx3) | ~30 lectures | self-paced |
-| [Philosophy and the Science of Human Nature II (Yale OYC)](https://oyc.yale.edu/philosophy-and-psychology/phil-182) | 24 lectures | ~6 hr/wk |
+- [Philosophy of Mind (UC Berkeley / Prof. John Searle)](https://www.youtube.com/playlist?list=PL553DCA4DB88B0408)
+- [Introduction to Philosophy of Language (MIT OpenCourseWare – 24.251 / Prof. Stephen Yablo)](https://ocw.mit.edu/courses/24-251-introduction-to-philosophy-of-language-fall-2011/)
+- [Introduction to the Philosophy of Cognitive Sciences (Coursera / University of Edinburgh / Prof. Michela Massimi)](https://www.coursera.org/learn/philosophy-cognitive-sciences)
+- [Metaphor: Philosophical Issues in Language and Art (University of Oxford / Prof. Elisabeth Camp)](https://podcasts.ox.ac.uk/series/metaphor-philosophical-issues)
 
+## Logic, Formal Methods, and Epistemology
 
-## Logic & Formal Methods
+- [Paradox and Infinity (MIT OpenCourseWare – 24.118 / Prof. Agustín Rayo)](https://ocw.mit.edu/courses/24-118-paradox-and-infinity-spring-2019/)
+- [Modal Logic (MIT OpenCourseWare – 24.244 / Prof. Stephen Yablo)](https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/)
+- [Introduction to Mathematical Thinking (Coursera / Stanford Online / Dr. Keith Devlin)](https://www.coursera.org/learn/mathematical-thinking)
 
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [Introduction to Mathematical Thinking (Stanford Online)](https://www.coursera.org/learn/mathematical-thinking) | 10 weeks | 6–10 hr/wk |
-| [Computability, Complexity, and Algorithms (MIT OCW 6.045J)](https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/) | self-paced | 6–10 hr/wk |
-| [Symbolic Logic (UC Davis full YouTube series)](https://www.youtube.com/playlist?list=PLF03C83F48E5C341E) | ~30 lectures | self-paced |
+## Ethics, Justice, and Political Philosophy
 
+- [The Moral Foundations of Politics (Open Yale Courses – PLSC 118 / Prof. Ian Shapiro)](https://oyc.yale.edu/political-science/plsc-118)
+- [Philosophy of Law (MIT OpenCourseWare – 24.235J / Prof. Julia Markovits)](https://ocw.mit.edu/courses/24-235j-philosophy-of-law-spring-2012/)
+- [Ethics of Technology (MIT OpenCourseWare – 24.131 / Dr. Kevin Mills)](https://ocw.mit.edu/courses/24-131-ethics-of-technology-spring-2023/)
+- [Effective Altruism (Coursera / Princeton University / Prof. Peter Singer)](https://www.coursera.org/learn/effective-altruism)
+- [Practical Ethics Bites (University of Oxford / Oxford Uehiro Centre for Practical Ethics)](https://podcasts.ox.ac.uk/series/practical-ethics-bites)
 
-## Ethics & Political Philosophy
+## Philosophy of Science, Religion, and Aesthetics
 
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [Global Ethics (Leeds / FutureLearn)](https://www.futurelearn.com/courses/global-ethics) | 2–3 weeks | 4–6 hr/wk |
-| [Political Philosophy: An Introduction (Oxford – YouTube)](https://www.youtube.com/results?search_query=oxford+political+philosophy+lectures) | varies | self-paced |
-| [Bioethics: The Law, Medicine, and Ethics of End-of-Life Care (Harvard)](https://pll.harvard.edu/course/bioethics-end-life-care) | 10–12 weeks | 4–6 hr/wk |
-
-
-## Epistemology & Metaphysics
-
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [Knowledge and Reality (MIT OCW 24.02)](https://ocw.mit.edu/courses/24-02-moral-problems-and-the-good-life-spring-2012/) | self-paced | 6–8 hr/wk |
-| [Free Will and Moral Responsibility (UCI Open)](https://ocw.uci.edu/courses/philosophy_139_free_will_and_moral_responsibility.html) | 10 weeks | ~6 hr/wk |
-| [Epistemology (Oxford – YouTube seminar series)](https://www.youtube.com/results?search_query=oxford+epistemology+lectures) | varies | self-paced |
-
-
-## Philosophy of Mind & Cognitive Science
-
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [The Hard Problem of Consciousness (YouTube – David Chalmers lecture series)](https://www.youtube.com/results?search_query=david+chalmers+lectures) | varies | self-paced |
-| [Introduction to Cognitive Science (Carnegie Mellon / OLI)](https://oli.cmu.edu/courses/cognitive-science/) | self-paced | 4–6 hr/wk |
-| [MIND101x: The Science of Everyday Thinking (UQ / edX)](https://www.edx.org/course/the-science-of-everyday-thinking) | 12 weeks | 4–6 hr/wk |
-
-
-## Philosophy of Science
-
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [Scientific Thinking (MIT OCW 24.03)](https://ocw.mit.edu/courses/24-03-good-food-ethics-and-politics-of-food-fall-2013/) | self-paced | 6–8 hr/wk |
-| [Karl Popper and the Philosophy of Science (YouTube)](https://www.youtube.com/results?search_query=popper+philosophy+lecture+series) | varies | self-paced |
-| [Philosophy of Physics (Oxford – YouTube)](https://www.youtube.com/results?search_query=oxford+philosophy+of+physics) | varies | self-paced |
-
-
-## Aesthetics & Philosophy of Art
-
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [Aesthetics and the Philosophy of Art (MIT OCW 24.262)](https://ocw.mit.edu/courses/24-262-aesthetics-fall-2004/) | self-paced | 6–8 hr/wk |
-| [Philosophy of Film (Oxford YouTube – Film Philosophy Series)](https://www.youtube.com/results?search_query=oxford+philosophy+of+film) | varies | self-paced |
-
-
-## Specialized Topics (Metaethics, Philosophy of Language, etc.)
-
-| Courses | Duration | Effort |
-| :-- | :--: | :--: | 
-| [Metaethics (MIT OCW)](https://ocw.mit.edu/courses/24-120-logic-i-fall-2010/) | self-paced | 6–8 hr/wk |
-| [Semantics and Pragmatics (MIT OCW 24.900)](https://ocw.mit.edu/courses/24-900-introduction-to-linguistics-fall-2012/) | self-paced | 8–12 hr/wk |
-| [Philosophy of Mathematics (YouTube – Stewart Shapiro, OSU)](https://www.youtube.com/results?search_query=stewart+shapiro+philosophy+of+mathematics) | varies | self-paced |
-
-
-### Online Learning - Great Courses
-
-Courses | Duration | Effort
-:-- | :--: | :--:
-[Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn) | 4 weeks | 2 hours/week
-[Mindshift](https://www.coursera.org/learn/mindshift) | 4 weeks | 2 hours/week
-[Powersearching with Google](https://www.edx.org/learn/google-power-searching/google-power-searching-with-google) | 3 weeks | 4-6 hours/week
+- [Introduction to the Philosophy of Physical Sciences (Coursera / University of Edinburgh / Prof. Michela Massimi)](https://www.coursera.org/learn/philosophy-physical-sciences)
+- [Reality Bites: Introduction to Metaphysics (Coursera / Erasmus University Rotterdam / Dr. Tim De Mey)](https://www.coursera.org/learn/metaphysics)
+- [Aesthetics and Philosophy of Art Lectures (University of Oxford / Dr. James Grant)](https://podcasts.ox.ac.uk/series/aesthetics-and-philosophy-art-lectures)
+- [Philosophy of Religion (University of Oxford / Dr. T. J. Mawson)](https://podcasts.ox.ac.uk/series/philosophy-religion)

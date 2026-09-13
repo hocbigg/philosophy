@@ -1,62 +1,48 @@
-# Projects
+# Philosophy Projects
 
-This page is a curated collection of well-written, step-by-step guides for learning Philosophy through hands-on, project-based practice.
+A curated directory of concrete project walkthroughs, step-by-step methodological guides, and open analytical workflows for self-directed learners applying philosophical tools to tangible artifacts.
 
-> _What I cannot create, I do not understand — Richard Feynman._
+- [Write an Argumentative Philosophy Essay](#write-an-argumentative-philosophy-essay)
+- [Map and Reconstruct Complex Arguments](#map-and-reconstruct-complex-arguments)
+- [Construct and Test a Thought Experiment](#construct-and-test-a-thought-experiment)
+- [Conduct an Applied Ethics Case Analysis](#conduct-an-applied-ethics-case-analysis)
+- [Write an Exegetical Commentary on a Primary Text](#write-an-exegetical-commentary-on-a-primary-text)
+- [Draft a Public Philosophy Essay or Op-Ed](#draft-a-public-philosophy-essay-or-op-ed)
 
-These projects are meant to support learning throughout the curriculum, not only at the end.  
-By building, writing, creating, or reconstructing real artifacts in the field, learners develop practical understanding alongside theoretical study.
+## Write an Argumentative Philosophy Essay
 
-## Tutorials
+- [Guidelines on Writing a Philosophy Paper (Jim Pryor)](https://www.jimpryor.net/teaching/guidelines/writing.html)
+- [A Guide to Philosophical Writing (Elijah Chudnoff / Harvard Writing Project)](https://hwpi.harvard.edu/files/hwp/files/philosophical_writing.pdf)
+- [Writing a Philosophy Paper (Peter Horban / Simon Fraser University)](https://www.sfu.ca/philosophy/resources/writing.html)
+- [Philosophy Writing Guide: Constructing Arguments and Objections (Swarthmore College)](https://www.swarthmore.edu/writing/philosophy-writing-guide)
+- [Philosophy Handout: Writing an Argumentative Essay (UNC Writing Center)](https://writingcenter.unc.edu/tips-and-tools/philosophy/)
 
-- [philosophical arguments](#write-your-own-philosophical-arguments)
-- [thought experiments](#construct-your-own-thought-experiments)
-- [definitions](#formulate-your-own-definitions)
-- [ethical theories](#develop-your-own-ethical-theories)
-- [political philosophies](#build-your-own-political-philosophies)
-- [interpretations of classic texts](#reconstruct-your-own-interpretations-of-classic-texts)
-- [philosophical essays](#write-your-own-philosophical-essays)
-- [objections and replies](#formulate-your-own-objections-and-replies)
-- [critiques of existing positions](#write-your-own-critiques-of-existing-positions)
+## Map and Reconstruct Complex Arguments
 
-### Write your own philosophical arguments
+- [Argument Diagramming Open & Free Course (Carnegie Mellon University Open Learning Initiative)](https://oli.cmu.edu/courses/argument-diagramming-open-free/)
+- [Argument Mapping Tutorial: Module A10 (Joe Lau / Philosophy@HKU)](https://philosophy.hku.hk/think/arg/complex.php)
+- [Argument Visualization Tutorial (MindMup)](https://www.mindmup.com/tutorials/argument-visualization.html)
+- [Guidelines on Reading and Reconstructing Philosophical Arguments (Jim Pryor)](https://www.jimpryor.net/teaching/guidelines/reading.html)
 
-- [Guidelines on Writing a Philosophy Paper — Jim Pryor](https://www.jimpryor.net/teaching/guidelines/writing.html) (Detailed step-by-step guide)
-- [Philosophy Writing Guide — Swarthmore College](https://www.swarthmore.edu/writing/philosophy-writing-guide) (Structured argumentation walkthrough)
+## Construct and Test a Thought Experiment
 
-### Construct your own thought experiments
+- [A Primer on Thought Experiments (Hunter Aiken / TRU Open Press)](https://greatthinkers.pressbooks.tru.ca/part/thought-experiments/)
+- [How to Use Thought Experiments (David R. MacIver)](https://drmaciver.substack.com/p/how-to-use-thought-experiments)
 
-- [How to use thought experiments — David R. MacIver](https://drmaciver.substack.com/p/how-to-use-thought-experiments) (Practical guide to creating and applying them)
-- [A Primer on Thought Experiments — Great Thinkers](https://greatthinkers.pressbooks.tru.ca/part/thought-experiments) (Step-by-step on deploying and crafting)
+## Conduct an Applied Ethics Case Analysis
 
-### Formulate your own definitions
+- [A Framework for Ethical Decision Making (Markkula Center for Applied Ethics / Santa Clara University)](https://www.scu.edu/ethics/ethics-resources/a-framework-for-ethical-decision-making/)
+- [A Framework for Making Ethical Decisions (Science and Technology Studies / Brown University)](https://sts.brown.edu/events/events-archive/making-choices/framework-making-ethical-decisions)
+- [Applied Ethics Cases Repository (Markkula Center for Applied Ethics / Santa Clara University)](https://www.scu.edu/ethics/ethics-resources/ethics-cases/)
 
-- [Definitions — Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/entries/definitions/) (Analytical guide to types and construction)
-- [Lessons in Logic 49: How to Make Good Definitions (YouTube)](https://www.youtube.com/watch?v=TugOSJeB4ro) (Video tutorial on rules for good definitions)
+## Write an Exegetical Commentary on a Primary Text
 
-### Develop your own ethical theories
+- [How to Write a Philosophy Paper: Exposition and Evaluation (Amy Kind / Claremont McKenna College)](https://www1.cmc.edu/pages/faculty/akind/intro01s/writing.htm)
+- [Guidelines on Reading Philosophy (Jim Pryor)](https://www.jimpryor.net/teaching/guidelines/reading.html)
+- [Philosophy Handout: Reconstructing Textual Arguments (UNC Writing Center)](https://writingcenter.unc.edu/tips-and-tools/philosophy/)
 
-- [A Framework for Ethical Decision Making — Markkula Center](https://www.scu.edu/ethics/ethics-resources/a-framework-for-ethical-decision-making/) (Step-by-step to build ethical positions)
-- [A Framework for Making Ethical Decisions — Brown University](https://sts.brown.edu/events/events-archive/making-choices/framework-making-ethical-decisions) (Consequentialist/duty/virtue frameworks for theory development)
+## Draft a Public Philosophy Essay or Op-Ed
 
-### Build your own political philosophies
-
-- [How to Self-Learn Political Philosophy (An 8-Step Roadmap) — Knowledge Lust](https://knowledgelust.com/how-to-self-learn-political-philosophy-an-8-step-roadmap) (Sequential guide adaptable to constructing views)
-
-### Reconstruct your own interpretations of classic texts
-
-- [How to Write a Philosophy Paper — UNC Writing Center](https://writingcenter.unc.edu/tips-and-tools/philosophy) (Includes argument reconstruction steps applicable to texts)
-
-### Write your own philosophical essays
-
-- [A Guide to Writing Philosophy Papers — GWU](https://writingprogram.gwu.edu/guide-writing-philosophy-papers) (Step-by-step essay construction)
-- [How to Write a Philosophy Paper (Basics) — YouTube series](https://www.youtube.com/watch?v=5xCx3UkeCh8) (Video walkthrough)
-
-### Formulate your own objections and replies
-
-- [Philosophy - The Writing Center — UNC](https://writingcenter.unc.edu/tips-and-tools/philosophy) (Counterargument and reply structuring)
-
-### Write your own critiques of existing positions
-
-- [Guidelines on Writing a Philosophy Paper — Jim Pryor](https://www.jimpryor.net/teaching/guidelines/writing.html) (Critique and defense steps)
-- [How to Write a Philosophy Paper — CMC](https://www1.cmc.edu/pages/faculty/akind/intro01s/writing.htm) (Critiquing arguments guide)
+- [The Use of Narrative in Public Philosophy: A Diagrammatic Guide (Barry Lam / Blog of the APA)](https://blog.apaonline.org/2018/10/01/the-use-of-narrative-in-public-philosophy-a-diagrammatic-guide/)
+- [Op-Ed Writing: The Basics (The OpEd Project)](https://www.theopedproject.org/resources)
+- [Public Philosophy Editors on Pitching (Helen De Cruz & David V. Johnson / Blog of the APA)](https://blog.apaonline.org/2020/12/10/public-philosophy-editors-on-pitching/)
