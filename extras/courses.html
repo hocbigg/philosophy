@@ -1,305 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Great Courses</title>
-<link rel="stylesheet" href="/philosophy/style.css">
-<meta name="description" content="">
+  <title>Great Courses</title>
+  <meta name="description" content="A lightweight static page by hocbigg.">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/philosophy/">
+  <link rel="canonical" href="https://hocbigg.github.io/philosophy/extras/courses.html">
+  <meta property="og:title" content="Great Courses">
+  <meta property="og:description" content="A lightweight static page by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/philosophy/extras/courses.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Great Courses">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/philosophy/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/philosophy/">Philosophy</a>
-<a href="/philosophy/advanced_topics.html">Advanced Topics</a>
-<a href="/philosophy/projects.html">Projects</a>
-<a href="/philosophy/extras/courses.html">Extra Courses</a>
-<a href="/philosophy/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/philosophy/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/philosophy/">Philosophy</a></li>
+      <li><a href="/philosophy/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/philosophy/projects.html">Projects</a></li>
+      <li><a href="/philosophy/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/philosophy/extras/courses.html">Extra Courses</a></li>
+      <li><a href="/philosophy/extras/other_curricula.html">Other Curricula</a></li>
+      <li><a href="https://github.com/hocbigg/philosophy" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
 
 <h1 id="great-courses">Great Courses</h1>
-<p>This is a list of high-quality courses that, for one reason or another, didn't make it into the curriculum.
-The most common reasons are that the course isn't available often enough,
-or that there was an alternative that fit better into the curriculum.</p>
-<h2 id="ancient-philosophy">Ancient Philosophy</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://oyc.yale.edu/classics/clcv-205">Introduction to Ancient Greek Philosophy (Yale OYC – PHIL 201)</a></td>
-<td style="text-align: center;">24 lectures</td>
-<td style="text-align: center;">~6 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-231-philosophy-of-platos-republic-fall-2006/">Plato’s Republic (MIT OCW 24.231)</a></td>
-<td style="text-align: center;">self-paced</td>
-<td style="text-align: center;">6–8 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/results?search_query=aristotle+metaphysics+lecture+series">Aristotle: Metaphysics (YouTube – Harvard/Howard lectures)</a></td>
-<td style="text-align: center;">varies</td>
-<td style="text-align: center;">varies</td>
-</tr>
-</tbody>
-</table>
-<h2 id="early-modern-enlightenment">Early Modern &amp; Enlightenment</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=fP7WvI3i5nE&amp;list=PLR5A0t6_2xplpW4W2I0hLjVQPhR9ykVx3">Kant’s Critique of Pure Reason (YouTube – Oxford, Dan Robinson series)</a></td>
-<td style="text-align: center;">~30 lectures</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://oyc.yale.edu/philosophy-and-psychology/phil-182">Philosophy and the Science of Human Nature II (Yale OYC)</a></td>
-<td style="text-align: center;">24 lectures</td>
-<td style="text-align: center;">~6 hr/wk</td>
-</tr>
-</tbody>
-</table>
-<h2 id="logic-formal-methods">Logic &amp; Formal Methods</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/mathematical-thinking">Introduction to Mathematical Thinking (Stanford Online)</a></td>
-<td style="text-align: center;">10 weeks</td>
-<td style="text-align: center;">6–10 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/">Computability, Complexity, and Algorithms (MIT OCW 6.045J)</a></td>
-<td style="text-align: center;">self-paced</td>
-<td style="text-align: center;">6–10 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/playlist?list=PLF03C83F48E5C341E">Symbolic Logic (UC Davis full YouTube series)</a></td>
-<td style="text-align: center;">~30 lectures</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ethics-political-philosophy">Ethics &amp; Political Philosophy</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.futurelearn.com/courses/global-ethics">Global Ethics (Leeds / FutureLearn)</a></td>
-<td style="text-align: center;">2–3 weeks</td>
-<td style="text-align: center;">4–6 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/results?search_query=oxford+political+philosophy+lectures">Political Philosophy: An Introduction (Oxford – YouTube)</a></td>
-<td style="text-align: center;">varies</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://pll.harvard.edu/course/bioethics-end-life-care">Bioethics: The Law, Medicine, and Ethics of End-of-Life Care (Harvard)</a></td>
-<td style="text-align: center;">10–12 weeks</td>
-<td style="text-align: center;">4–6 hr/wk</td>
-</tr>
-</tbody>
-</table>
-<h2 id="epistemology-metaphysics">Epistemology &amp; Metaphysics</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-02-moral-problems-and-the-good-life-spring-2012/">Knowledge and Reality (MIT OCW 24.02)</a></td>
-<td style="text-align: center;">self-paced</td>
-<td style="text-align: center;">6–8 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://ocw.uci.edu/courses/philosophy_139_free_will_and_moral_responsibility.html">Free Will and Moral Responsibility (UCI Open)</a></td>
-<td style="text-align: center;">10 weeks</td>
-<td style="text-align: center;">~6 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/results?search_query=oxford+epistemology+lectures">Epistemology (Oxford – YouTube seminar series)</a></td>
-<td style="text-align: center;">varies</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-</tbody>
-</table>
-<h2 id="philosophy-of-mind-cognitive-science">Philosophy of Mind &amp; Cognitive Science</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/results?search_query=david+chalmers+lectures">The Hard Problem of Consciousness (YouTube – David Chalmers lecture series)</a></td>
-<td style="text-align: center;">varies</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://oli.cmu.edu/courses/cognitive-science/">Introduction to Cognitive Science (Carnegie Mellon / OLI)</a></td>
-<td style="text-align: center;">self-paced</td>
-<td style="text-align: center;">4–6 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.edx.org/course/the-science-of-everyday-thinking">MIND101x: The Science of Everyday Thinking (UQ / edX)</a></td>
-<td style="text-align: center;">12 weeks</td>
-<td style="text-align: center;">4–6 hr/wk</td>
-</tr>
-</tbody>
-</table>
-<h2 id="philosophy-of-science">Philosophy of Science</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-03-good-food-ethics-and-politics-of-food-fall-2013/">Scientific Thinking (MIT OCW 24.03)</a></td>
-<td style="text-align: center;">self-paced</td>
-<td style="text-align: center;">6–8 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/results?search_query=popper+philosophy+lecture+series">Karl Popper and the Philosophy of Science (YouTube)</a></td>
-<td style="text-align: center;">varies</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/results?search_query=oxford+philosophy+of+physics">Philosophy of Physics (Oxford – YouTube)</a></td>
-<td style="text-align: center;">varies</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-</tbody>
-</table>
-<h2 id="aesthetics-philosophy-of-art">Aesthetics &amp; Philosophy of Art</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-262-aesthetics-fall-2004/">Aesthetics and the Philosophy of Art (MIT OCW 24.262)</a></td>
-<td style="text-align: center;">self-paced</td>
-<td style="text-align: center;">6–8 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/results?search_query=oxford+philosophy+of+film">Philosophy of Film (Oxford YouTube – Film Philosophy Series)</a></td>
-<td style="text-align: center;">varies</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-</tbody>
-</table>
-<h2 id="specialized-topics-metaethics-philosophy-of-language-etc">Specialized Topics (Metaethics, Philosophy of Language, etc.)</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-120-logic-i-fall-2010/">Metaethics (MIT OCW)</a></td>
-<td style="text-align: center;">self-paced</td>
-<td style="text-align: center;">6–8 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-900-introduction-to-linguistics-fall-2012/">Semantics and Pragmatics (MIT OCW 24.900)</a></td>
-<td style="text-align: center;">self-paced</td>
-<td style="text-align: center;">8–12 hr/wk</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/results?search_query=stewart+shapiro+philosophy+of+mathematics">Philosophy of Mathematics (YouTube – Stewart Shapiro, OSU)</a></td>
-<td style="text-align: center;">varies</td>
-<td style="text-align: center;">self-paced</td>
-</tr>
-</tbody>
-</table>
-<h3 id="online-learning-great-courses">Online Learning - Great Courses</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Courses</th>
-<th style="text-align: center;">Duration</th>
-<th style="text-align: center;">Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/learning-how-to-learn">Learning How to Learn</a></td>
-<td style="text-align: center;">4 weeks</td>
-<td style="text-align: center;">2 hours/week</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/mindshift">Mindshift</a></td>
-<td style="text-align: center;">4 weeks</td>
-<td style="text-align: center;">2 hours/week</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.edx.org/learn/google-power-searching/google-power-searching-with-google">Powersearching with Google</a></td>
-<td style="text-align: center;">3 weeks</td>
-<td style="text-align: center;">4-6 hours/week</td>
-</tr>
-</tbody>
-</table>
-</article>
-</main>
+<p>A curated directory of full-length university lectures, high-production open courseware, and comprehensive audio-visual lecture series for exploring philosophy beyond standard survey curricula.</p>
+<ul>
+<li><a href="#historical-deep-dives-and-major-philosophers">Historical Deep-Dives and Major Philosophers</a></li>
+<li><a href="#mind-language-and-cognitive-science">Mind, Language, and Cognitive Science</a></li>
+<li><a href="#logic-formal-methods-and-epistemology">Logic, Formal Methods, and Epistemology</a></li>
+<li><a href="#ethics-justice-and-political-philosophy">Ethics, Justice, and Political Philosophy</a></li>
+<li><a href="#philosophy-of-science-religion-and-aesthetics">Philosophy of Science, Religion, and Aesthetics</a></li>
+</ul>
+<h2 id="historical-deep-dives-and-major-philosophers">Historical Deep-Dives and Major Philosophers</h2>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PL9GwT4_YRZdBf9nIUHs0zjrnUVl-KBNSM" target="_blank" rel="noopener noreferrer">A History of Philosophy (Wheaton College / Prof. Arthur Holmes)</a></li>
+<li><a href="https://podcasts.ox.ac.uk/series/kants-critique-pure-reason" target="_blank" rel="noopener noreferrer">Kant’s Critique of Pure Reason (University of Oxford / Prof. Daniel N. Robinson)</a></li>
+<li><a href="https://oyc.yale.edu/philosophy/phil-176" target="_blank" rel="noopener noreferrer">Death (Open Yale Courses – PHIL 176 / Prof. Shelly Kagan)</a></li>
+<li><a href="https://archive.org/details/Philosophy_185_Fall_2007_UC_Berkeley" target="_blank" rel="noopener noreferrer">Philosophy 185: Heidegger's Being and Time (UC Berkeley / Prof. Hubert Dreyfus / Internet Archive)</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLA34681B9BE88F5AA" target="_blank" rel="noopener noreferrer">The Self Under Siege: Philosophy in the Twentieth Century (Duke University / Prof. Rick Roderick)</a></li>
+</ul>
+<h2 id="mind-language-and-cognitive-science">Mind, Language, and Cognitive Science</h2>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PL553DCA4DB88B0408" target="_blank" rel="noopener noreferrer">Philosophy of Mind (UC Berkeley / Prof. John Searle)</a></li>
+<li><a href="https://ocw.mit.edu/courses/24-251-introduction-to-philosophy-of-language-fall-2011/" target="_blank" rel="noopener noreferrer">Introduction to Philosophy of Language (MIT OpenCourseWare – 24.251 / Prof. Stephen Yablo)</a></li>
+<li><a href="https://www.coursera.org/learn/philosophy-cognitive-sciences" target="_blank" rel="noopener noreferrer">Introduction to the Philosophy of Cognitive Sciences (Coursera / University of Edinburgh / Prof. Michela Massimi)</a></li>
+<li><a href="https://podcasts.ox.ac.uk/series/metaphor-philosophical-issues" target="_blank" rel="noopener noreferrer">Metaphor: Philosophical Issues in Language and Art (University of Oxford / Prof. Elisabeth Camp)</a></li>
+</ul>
+<h2 id="logic-formal-methods-and-epistemology">Logic, Formal Methods, and Epistemology</h2>
+<ul>
+<li><a href="https://ocw.mit.edu/courses/24-118-paradox-and-infinity-spring-2019/" target="_blank" rel="noopener noreferrer">Paradox and Infinity (MIT OpenCourseWare – 24.118 / Prof. Agustín Rayo)</a></li>
+<li><a href="https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/" target="_blank" rel="noopener noreferrer">Modal Logic (MIT OpenCourseWare – 24.244 / Prof. Stephen Yablo)</a></li>
+<li><a href="https://www.coursera.org/learn/mathematical-thinking" target="_blank" rel="noopener noreferrer">Introduction to Mathematical Thinking (Coursera / Stanford Online / Dr. Keith Devlin)</a></li>
+</ul>
+<h2 id="ethics-justice-and-political-philosophy">Ethics, Justice, and Political Philosophy</h2>
+<ul>
+<li><a href="https://oyc.yale.edu/political-science/plsc-118" target="_blank" rel="noopener noreferrer">The Moral Foundations of Politics (Open Yale Courses – PLSC 118 / Prof. Ian Shapiro)</a></li>
+<li><a href="https://ocw.mit.edu/courses/24-235j-philosophy-of-law-spring-2012/" target="_blank" rel="noopener noreferrer">Philosophy of Law (MIT OpenCourseWare – 24.235J / Prof. Julia Markovits)</a></li>
+<li><a href="https://ocw.mit.edu/courses/24-131-ethics-of-technology-spring-2023/" target="_blank" rel="noopener noreferrer">Ethics of Technology (MIT OpenCourseWare – 24.131 / Dr. Kevin Mills)</a></li>
+<li><a href="https://www.coursera.org/learn/effective-altruism" target="_blank" rel="noopener noreferrer">Effective Altruism (Coursera / Princeton University / Prof. Peter Singer)</a></li>
+<li><a href="https://podcasts.ox.ac.uk/series/practical-ethics-bites" target="_blank" rel="noopener noreferrer">Practical Ethics Bites (University of Oxford / Oxford Uehiro Centre for Practical Ethics)</a></li>
+</ul>
+<h2 id="philosophy-of-science-religion-and-aesthetics">Philosophy of Science, Religion, and Aesthetics</h2>
+<ul>
+<li><a href="https://www.coursera.org/learn/philosophy-physical-sciences" target="_blank" rel="noopener noreferrer">Introduction to the Philosophy of Physical Sciences (Coursera / University of Edinburgh / Prof. Michela Massimi)</a></li>
+<li><a href="https://www.coursera.org/learn/metaphysics" target="_blank" rel="noopener noreferrer">Reality Bites: Introduction to Metaphysics (Coursera / Erasmus University Rotterdam / Dr. Tim De Mey)</a></li>
+<li><a href="https://podcasts.ox.ac.uk/series/aesthetics-and-philosophy-art-lectures" target="_blank" rel="noopener noreferrer">Aesthetics and Philosophy of Art Lectures (University of Oxford / Dr. James Grant)</a></li>
+<li><a href="https://podcasts.ox.ac.uk/series/philosophy-religion" target="_blank" rel="noopener noreferrer">Philosophy of Religion (University of Oxford / Dr. T. J. Mawson)</a></li>
+</ul>
+    </article>
+  </main>
 
 </body>
 </html>

@@ -1,79 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Advanced Topics</title>
-<link rel="stylesheet" href="/philosophy/style.css">
-<meta name="description" content="">
+  <title>Advanced Topics</title>
+  <meta name="description" content="A lightweight static page by hocbigg.">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/philosophy/">
+  <link rel="canonical" href="https://hocbigg.github.io/philosophy/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics">
+  <meta property="og:description" content="A lightweight static page by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/philosophy/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Advanced Topics">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/philosophy/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/philosophy/">Philosophy</a>
-<a href="/philosophy/advanced_topics.html">Advanced Topics</a>
-<a href="/philosophy/projects.html">Projects</a>
-<a href="/philosophy/extras/courses.html">Extra Courses</a>
-<a href="/philosophy/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/philosophy/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/philosophy/">Philosophy</a></li>
+      <li><a href="/philosophy/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/philosophy/projects.html">Projects</a></li>
+      <li><a href="/philosophy/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/philosophy/extras/courses.html">Extra Courses</a></li>
+      <li><a href="/philosophy/extras/other_curricula.html">Other Curricula</a></li>
+      <li><a href="https://github.com/hocbigg/philosophy" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
 
 <h1 id="advanced-topics">Advanced Topics</h1>
-<p>Purpose: Optional deepening after mastery of core domains.</p>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book / Text</th>
-<th>Online Resource</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Philosophy of Language</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/philosophyoflang0000lyca">William Lycan – <em>Philosophy of Language</em> (Archive.org)</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Uk5pIzCNOzU&amp;list=PLw4-Fp0S2dJaBW6Xn3VKiUE3_9RWcAH77">Searle: Philosophy of Language</a></td>
-</tr>
-<tr>
-<td>Aesthetics</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/aesthetic-concept/">SEP – Aesthetics</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.open.edu/openlearn/history-the-arts/art-and-philosophy">Open University – Art and Philosophy</a></td>
-</tr>
-<tr>
-<td>Advanced Logic and Analytic Philosophy</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://global.oup.com/academic/product/intermediate-logic-9780198751427">David Bostock – <em>Intermediate Logic</em> (official publisher page; full text requires purchase, but preview available)</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://oli.cmu.edu/courses/argument-diagramming-open-free/">Carnegie Mellon – Argument Diagramming</a></td>
-</tr>
-<tr>
-<td>Philosophy of Science</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/philosophyofscie0000okas">Samir Okasha – <em>Philosophy of Science: A Very Short Introduction</em> (Archive.org)</a></td>
-<td>University of Pennsylvania – Philosophy of Science (Coursera, audit)</td>
-</tr>
-<tr>
-<td>Applied and Contemporary Ethics</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/ethics-applied/">SEP – Applied Ethics</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="http://podcasts.ox.ac.uk/series/practical-ethics">Oxford – Practical Ethics</a></td>
-</tr>
-</tbody>
-</table>
-</article>
-</main>
+<p>Specialization tracks designed for learners who have completed the core undergraduate curriculum and wish to pursue specialized subfields, advanced formal tools, and contemporary research literature. Learners are encouraged to choose one or two tracks aligned with their intellectual goals rather than attempting to complete every track.</p>
+<ul>
+<li><a href="#mathematical-logic-and-formal-epistemology">Mathematical Logic and Formal Epistemology</a>: Rigorous metalogic, non-classical and modal semantics, Bayesian probability, and formal models of rational choice.</li>
+<li><a href="#philosophy-of-language-mind-and-cognitive-science">Philosophy of Language, Mind, and Cognitive Science</a>: Theories of reference, the hard problem of consciousness, intentionality, and cognitive architecture.</li>
+<li><a href="#advanced-metaphysics-and-philosophy-of-science">Advanced Metaphysics and Philosophy of Science</a>: Modal realism, constructive empiricism, laws of nature, and the philosophical foundations of spacetime physics.</li>
+<li><a href="#moral-political-and-legal-philosophy">Moral, Political, and Legal Philosophy</a>: Metaethical realism, contractualist ethics, distributive justice, analytical jurisprudence, and the ethics of mortality.</li>
+<li><a href="#continental-philosophy-and-critical-theory">Continental Philosophy and Critical Theory</a>: Phenomenological ontology, Frankfurt School critique of instrumental reason, post-structuralist genealogy, and social epistemology.</li>
+</ul>
+<h2 id="mathematical-logic-and-formal-epistemology">Mathematical Logic and Formal Epistemology</h2>
+<p>Investigates metalogical properties of formal systems, non-classical semantics, probabilistic belief revision, and mathematical models of rational decision-making.</p>
+<p>Metalogic and Incompleteness: <a href="https://ocw.mit.edu/courses/24-118-paradox-and-infinity-spring-2019/" target="_blank" rel="noopener noreferrer">Paradox and Infinity (MIT OpenCourseWare / Agustín Rayo)</a> - A rigorous course covering computability, Turing machines, infinities, and the formal proof architecture of Gödel's incompleteness theorems.</p>
+<p>Metalogic and Incompleteness: <a href="https://books.google.com/books?isbn=9780521701464" target="_blank" rel="noopener noreferrer">Computability and Logic (George S. Boolos, John P. Burgess, &amp; Richard C. Jeffrey / Cambridge University Press)</a> - The canonical intermediate text establishing recursive function theory, undecidability, and the technical limits of first-order mathematical theories.</p>
+<p>Modal and Non-Classical Logics: <a href="https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/" target="_blank" rel="noopener noreferrer">Modal Logic (MIT OpenCourseWare / Stephen Yablo)</a> - Explores propositional modal systems, Kripke relational frame semantics, completeness proofs, and quantified modal logic.</p>
+<p>Modal and Non-Classical Logics: <a href="https://books.google.com/books?isbn=9781107609525" target="_blank" rel="noopener noreferrer">Modal Logic for Philosophers (James W. Garson / Cambridge University Press)</a> - A comprehensive textbook applying natural deduction and semantic truth trees to alethic, epistemic, and deontic modal systems.</p>
+<p>Formal and Bayesian Epistemology: <a href="https://books.google.com/books?isbn=9781780937144" target="_blank" rel="noopener noreferrer">A Critical Introduction to Formal Epistemology (Darren Bradley / Bloomsbury Academic)</a> - Introduces the probability calculus, Dutch book arguments, Bayesian conditionalization, and formal responses to confirmation paradoxes.</p>
+<p>Decision Theory and Rational Choice: <a href="https://books.google.com/books?isbn=9781107151598" target="_blank" rel="noopener noreferrer">An Introduction to Decision Theory (Martin Peterson / Cambridge University Press)</a> - Analyzes normative decision rules under ignorance and risk, utility theory, game theory, Newcomb's problem, and social choice paradoxes.</p>
+<h2 id="philosophy-of-language-mind-and-cognitive-science">Philosophy of Language, Mind, and Cognitive Science</h2>
+<p>Examines the mechanisms of linguistic reference, the metaphysical status of subjective experience, the nature of mental representation, and the philosophical foundations of artificial intelligence.</p>
+<p>Advanced Philosophy of Language: <a href="https://ocw.mit.edu/courses/24-251-introduction-to-philosophy-of-language-fall-2011/" target="_blank" rel="noopener noreferrer">Introduction to Philosophy of Language (MIT OpenCourseWare / Stephen Yablo)</a> - Provides structured lecture notes and assignments examining theories of meaning, descriptions, indexicals, speech acts, and conversational implicature.</p>
+<p>Advanced Philosophy of Language: <a href="https://books.google.com/books?isbn=9780674598461" target="_blank" rel="noopener noreferrer">Naming and Necessity (Saul A. Kripke / Harvard University Press)</a> - A transformative work that dismantles description theories of reference, establishes rigid designation, and introduces necessary a posteriori truths.</p>
+<p>Consciousness and the Hard Problem: <a href="https://books.google.com/books?isbn=9780195117899" target="_blank" rel="noopener noreferrer">The Conscious Mind: In Search of a Fundamental Theory (David J. Chalmers / Oxford University Press)</a> - The definitive formulation of the hard problem of consciousness, arguing for naturalistic dualism against reductive physicalist paradigms.</p>
+<p>Intentionality and Mental Representation: <a href="https://books.google.com/books?isbn=9780262560528" target="_blank" rel="noopener noreferrer">Psychosemantics: The Problem of Meaning in the Philosophy of Mind (Jerry A. Fodor / MIT Press)</a> - Develops the computational representational theory of mind and the Language of Thought hypothesis to ground intentional mental states physically.</p>
+<p>Philosophy of Artificial Intelligence and Cognitive Architecture: <a href="https://books.google.com/books?isbn=9780198739838" target="_blank" rel="noopener noreferrer">Superintelligence: Paths, Dangers, Strategies (Nick Bostrom / Oxford University Press)</a> - Investigates synthetic agency, recursive self-improvement, the orthogonality thesis, and value alignment in advanced artificial agents.</p>
+<h2 id="advanced-metaphysics-and-philosophy-of-science">Advanced Metaphysics and Philosophy of Science</h2>
+<p>Explores contemporary ontology, modal metaphysics, scientific anti-realism versus realism, and the conceptual foundations of space, time, and physical laws.</p>
+<p>Modal Realism and Contemporary Ontology: <a href="https://books.google.com/books?isbn=9780631224266" target="_blank" rel="noopener noreferrer">On the Plurality of Worlds (David Lewis / Wiley-Blackwell)</a> - The classic defense of genuine modal realism, positing concrete possible worlds to provide a reductive analysis of modality, causation, and content.</p>
+<p>Scientific Realism and Constructive Empiricism: <a href="https://books.google.com/books?isbn=9780198244271" target="_blank" rel="noopener noreferrer">The Scientific Image (Bas C. van Fraassen / Oxford University Press)</a> - Presents the premier modern challenge to scientific realism, arguing that the aim of science is empirical adequacy regarding observable phenomena rather than literal truth about unobservables.</p>
+<p>Laws of Nature and Causation: <a href="https://books.google.com/books?isbn=9781316507094" target="_blank" rel="noopener noreferrer">What Is a Law of Nature? (D. M. Armstrong / Cambridge University Press)</a> - Rejects regularist Humean supervenience in favor of the non-Humean view that laws of nature are objective relations of nomic necessity holding between universals.</p>
+<p>Philosophy of Physics: Space and Time: <a href="https://books.google.com/books?isbn=9780691165714" target="_blank" rel="noopener noreferrer">Philosophy of Physics: Space and Time (Tim Maudlin / Princeton University Press)</a> - Investigates the geometrical and physical structures of spacetime, contrasting substantivalist and relationist interpretations across Newtonian mechanics and Einstein's general relativity.</p>
+<h2 id="moral-political-and-legal-philosophy">Moral, Political, and Legal Philosophy</h2>
+<p>Deepens understanding of metaethical realism, contractualist moral obligation, institutional principles of distributive justice, legal positivism, and the ethics of mortality.</p>
+<p>Metaethics and Moral Realism: <a href="https://books.google.com/books?isbn=9780199280209" target="_blank" rel="noopener noreferrer">Moral Realism: A Defence (Russ Shafer-Landau / Oxford University Press)</a> - A comprehensive defense of non-naturalist moral realism that systematically addresses motivational internalism, evolutionary debunking, and epistemological skepticism.</p>
+<p>Contractualism and Normative Architecture: <a href="https://books.google.com/books?isbn=9780674004238" target="_blank" rel="noopener noreferrer">What We Owe to Each Other (T. M. Scanlon / Harvard University Press)</a> - The foundational treatise on contractualism, proposing that moral wrongness consists in violating principles that no rational agent could reasonably reject.</p>
+<p>Distributive Justice and Egalitarianism: <a href="https://books.google.com/books?isbn=9780674000780" target="_blank" rel="noopener noreferrer">A Theory of Justice: Revised Edition (John Rawls / Harvard University Press)</a> - The monumental 20th-century work that constructs justice as fairness using the original position, the veil of ignorance, and the difference principle.</p>
+<p>Philosophy of Law and Jurisprudence: <a href="https://ocw.mit.edu/courses/24-235j-philosophy-of-law-spring-2012/" target="_blank" rel="noopener noreferrer">Philosophy of Law (MIT OpenCourseWare / Julia Markovits)</a> - A comprehensive university seminar course examining legal validity, political obligation, constitutional interpretation, and the justification of state punishment.</p>
+<p>Philosophy of Law and Jurisprudence: <a href="https://books.google.com/books?isbn=9780199644704" target="_blank" rel="noopener noreferrer">The Concept of Law (H. L. A. Hart / Oxford University Press)</a> - The cornerstone text of modern analytical jurisprudence, defining law as the union of primary and secondary rules grounded in a social rule of recognition.</p>
+<p>Ethics of Mortality and Personal Identity: <a href="https://oyc.yale.edu/philosophy/phil-176" target="_blank" rel="noopener noreferrer">Death (Open Yale Courses / Shelly Kagan)</a> - A full-semester video lecture course investigating the nature of personal identity, the metaphysics of death, the rationality of suicide, and the value of life.</p>
+<h2 id="continental-philosophy-and-critical-theory">Continental Philosophy and Critical Theory</h2>
+<p>Engages with phenomenological hermeneutics, Frankfurt School critiques of instrumental rationality, genealogical power analyses, and structural epistemic injustice.</p>
+<p>Phenomenology and Fundamental Ontology: <a href="https://archive.org/details/Philosophy_185_Fall_2007_UC_Berkeley" target="_blank" rel="noopener noreferrer">Philosophy 185: Heidegger's Being and Time (UC Berkeley / Hubert Dreyfus / Internet Archive)</a> - A legendary 28-lecture university audio series providing an exhaustive, line-by-line phenomenological commentary on Being and Time.</p>
+<p>Phenomenology and Fundamental Ontology: <a href="https://books.google.com/books?isbn=9780061575594" target="_blank" rel="noopener noreferrer">Being and Time (Martin Heidegger / Harper Perennial)</a> - The foundational 20th-century continental text analyzing Dasein, being-in-the-world, fallenness, anxiety, and temporality as the meaning of Being.</p>
+<p>Critical Theory and the Frankfurt School: <a href="https://oyc.yale.edu/english/engl-300/lecture-17" target="_blank" rel="noopener noreferrer">The Frankfurt School of Critical Theory (Open Yale Courses / Paul H. Fry)</a> - A recorded university lecture analyzing the theoretical arguments of Theodor Adorno and Walter Benjamin regarding late capitalism, ideology, and the culture industry.</p>
+<p>Critical Theory and the Frankfurt School: <a href="https://books.google.com/books?isbn=9780804736336" target="_blank" rel="noopener noreferrer">Dialectic of Enlightenment (Max Horkheimer &amp; Theodor W. Adorno / Stanford University Press)</a> - A seminal critique arguing that the Enlightenment project of dominating external nature inevitably inverted into the totalitarian domination of human society.</p>
+<p>Post-Structuralism, Power, and Genealogy: <a href="https://books.google.com/books?isbn=9780679752554" target="_blank" rel="noopener noreferrer">Discipline and Punish: The Birth of the Prison (Michel Foucault / Vintage Books)</a> - Demonstrates genealogical method by tracing the emergence of disciplinary power, panopticism, and institutional surveillance in modern society.</p>
+<p>Social Epistemology and Epistemic Injustice: <a href="https://books.google.com/books?isbn=9780199570522" target="_blank" rel="noopener noreferrer">Epistemic Injustice: Power and the Ethics of Knowing (Miranda Fricker / Oxford University Press)</a> - Introduces the seminal concepts of testimonial and hermeneutical injustice, analyzing how systemic social prejudice undermines individuals in their capacity as knowers.</p>
+    </article>
+  </main>
 
 </body>
 </html>

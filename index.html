@@ -1,222 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Hocbigg - Philosophy</title>
-<link rel="stylesheet" href="/philosophy/style.css">
-<meta name="description" content="Path to a free self-taught education in Philosophy!">
+  <title>Hocbigg - Philosophy</title>
+  <meta name="description" content="Path to a free self-taught education in Philosophy!">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/philosophy/">
+  <link rel="canonical" href="https://hocbigg.github.io/philosophy/">
+  <meta property="og:title" content="Hocbigg - Philosophy">
+  <meta property="og:description" content="Path to a free self-taught education in Philosophy!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/philosophy/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Hocbigg - Philosophy">
-<meta property="og:description" content="Path to a free self-taught education in Philosophy!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/philosophy/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/philosophy/">Philosophy</a>
-<a href="/philosophy/advanced_topics.html">Advanced Topics</a>
-<a href="/philosophy/projects.html">Projects</a>
-<a href="/philosophy/extras/courses.html">Extra Courses</a>
-<a href="/philosophy/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/philosophy/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/philosophy/">Philosophy</a></li>
+      <li><a href="/philosophy/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/philosophy/projects.html">Projects</a></li>
+      <li><a href="/philosophy/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/philosophy/extras/courses.html">Extra Courses</a></li>
+      <li><a href="/philosophy/extras/other_curricula.html">Other Curricula</a></li>
+      <li><a href="https://github.com/hocbigg/philosophy" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
 
+  <main id="main-content">
+    <article>
 <header class="page-header">
-  <img src="/images/logo.png" alt="">
+  <img src="/images/logo.png" alt="Hocbigg logo">
   <h1>Hocbigg - Philosophy</h1>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-09-13">2026-09-13</time></small></p>
 </header>
-
-<h1 id="contents">Contents</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Philosophy is the systematic examination of fundamental questions concerning reality, knowledge, reason, mind, and value. Unlike disciplines that rely on empirical data collection or laboratory experimentation, philosophy operates through conceptual analysis, logical deduction, thought experiments, and disciplined argument evaluation. Studying philosophy trains you to identify unexamined assumptions, detect fallacious reasoning, and articulate complex positions with precision.</p>
+<p>This curriculum is designed for self-directed learners starting from scratch, with no prior formal background assumed. It provides a lean, rigorous foundation covering the central historical traditions, logical tools, and systematic subfields that define an undergraduate education in philosophy. </p>
+<p>This core does not attempt to cover the entire discipline. Advanced subfields, specialized methodologies, and technical concentrations (such as modal logic, decision theory, philosophy of science, and critical theory) are reserved for <a href="advanced_topics.html">Advanced Topics</a>. To engage directly with primary source literature, refer to <a href="extras/readings.html">Readings</a>; to explore structured lecture series, consult <a href="extras/courses.html">Courses</a>; and to apply these methods through independent writing and argument analysis, visit <a href="projects.html">Projects</a>.</p>
+<h3 id="recommended-study-path">Recommended Study Path</h3>
+<p>The subjects are sequenced intentionally into three progressive phases, moving from basic reasoning mechanics to historical frameworks and systematic questions:</p>
 <ul>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#communities">Communities</a></li>
-<li><a href="#curriculum">Curriculum</a></li>
-<li><a href="#code-of-conduct">Code of conduct</a></li>
+<li><strong>Orientation and Philosophical Tools:</strong> Begin with <em>Introduction to Philosophy</em> and <em>Critical Reasoning and Informal Logic</em>, followed by <em>Formal Logic</em>. Logic functions as the operating system of philosophy. Learning how to translate claims, test validity, and spot informal fallacies provides the analytical equipment you will need to engage with every subsequent subject.</li>
+<li><strong>Historical Foundations:</strong> Next, study <em>Ancient Greek Philosophy</em> and <em>Early Modern Philosophy</em>. Philosophical problems rarely make sense in isolation; they are parts of an ongoing historical dialectic. Understanding Plato and Aristotle, followed by early modern debates between rationalists (Descartes, Spinoza, Leibniz) and empiricists (Locke, Berkeley, Hume) culminating in Kant, establishes the vocabulary and conceptual problems that modern philosophers still debate.</li>
+<li><strong>Systematic Core Fields:</strong> With logical methods and historical context in place, proceed to the primary areas of systematic inquiry: <em>Epistemology</em>, <em>Metaphysics</em>, <em>Ethics</em>, <em>Political Philosophy</em>, and <em>Philosophy of Mind</em>. While these systematic fields can be studied in any order according to your intellectual focus, tackling <em>Epistemology</em> and <em>Metaphysics</em> first is advantageous, as questions of justification, truth, and ontology frequently inform positions in ethics, political philosophy, and philosophy of mind.</li>
 </ul>
-<h1 id="summary">Summary</h1>
-<p>This roadmap provides a structured, self-paced program equivalent to a 4-year undergraduate foundation in philosophy. </p>
-<p>It assumes a commitment to rigorous reading, critical analysis, and written reflection to build analytical skills, ethical reasoning, and philosophical argumentation.</p>
-<h2 id="organization">Organization</h2>
-<p>This repository is organized into three main components:</p>
-<ul>
-<li><strong>Core Curriculum</strong> (this page): the foundational knowledge of the field;</li>
-<li><strong><a href="advanced_topics.html">Advanced Topics</a></strong>: focused study in specific areas;</li>
-<li><strong><a href="projects.html">Projects</a></strong>: support learning through practical application throughout the curriculum.</li>
-</ul>
-<p><strong>Process:</strong> Learners may work through the curriculum independently or collaboratively, and either sequentially or selectively.</p>
-<ul>
-<li>For simplicity, courses in the Core Curriculum are ordered according to their prerequisites.</li>
-<li>The Core Curriculum provides a shared foundation and is intended to be completed in full.</li>
-<li>Advanced Topics are optional; learners are encouraged to select one area of focus and complete all courses within that topic.</li>
-</ul>
-<p>Practical work is integrated through the <a href="projects.html">Projects section</a> and may be undertaken alongside coursework.</p>
-<p>Note: When there are courses or books that don't fit into the curriculum but are otherwise of high quality,
-they belong in <a href="extras/courses.html">extras/courses</a>, <a href="extras/readings.html">extras/readings</a>.</p>
-<p><strong><a href="/CONTRIBUTING.html">How to contribute</a></strong></p>
-<h1 id="communities">Communities</h1>
+<h3 id="communities">Communities</h3>
 <ul>
 <li>Forums:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://thephilosophyforum.com/">The Philosophy Forum</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://onlinephilosophyclub.com/forums/">Online Philosophy Club</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://forum.philosophynow.org/">Philosophy Now Forum</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://able2know.org/forum/philosophy/">Able2Know Philosophy</a></li>
+<li><a href="https://thephilosophyforum.com/" target="_blank" rel="noopener noreferrer">The Philosophy Forum</a></li>
+<li><a href="https://onlinephilosophyclub.com/forums/" target="_blank" rel="noopener noreferrer">Online Philosophy Club</a></li>
+<li><a href="https://forum.philosophynow.org/" target="_blank" rel="noopener noreferrer">Philosophy Now Forum</a></li>
+<li><a href="https://able2know.org/forum/philosophy/" target="_blank" rel="noopener noreferrer">Able2Know Philosophy</a></li>
 </ul>
 </li>
 <li>Subreddits:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/philosophy/">r/philosophy</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/askphilosophy/">r/askphilosophy</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/AcademicPhilosophy/">r/AcademicPhilosophy</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/historyofphilosophy/">r/historyofphilosophy</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/Ethics/">r/Ethics</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/EasternPhilosophy/">r/EasternPhilosophy</a></li>
+<li><a href="https://www.reddit.com/r/philosophy/" target="_blank" rel="noopener noreferrer">r/philosophy</a></li>
+<li><a href="https://www.reddit.com/r/askphilosophy/" target="_blank" rel="noopener noreferrer">r/askphilosophy</a></li>
+<li><a href="https://www.reddit.com/r/AcademicPhilosophy/" target="_blank" rel="noopener noreferrer">r/AcademicPhilosophy</a></li>
+<li><a href="https://www.reddit.com/r/historyofphilosophy/" target="_blank" rel="noopener noreferrer">r/historyofphilosophy</a></li>
+<li><a href="https://www.reddit.com/r/Ethics/" target="_blank" rel="noopener noreferrer">r/Ethics</a></li>
+<li><a href="https://www.reddit.com/r/EasternPhilosophy/" target="_blank" rel="noopener noreferrer">r/EasternPhilosophy</a></li>
 </ul>
 </li>
 <li>Discord servers:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://discord.com/invite/philosophy">The Philosophy Chat</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://discord.com/invite/thephilosophycafe">The Philosophy Cafe</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://discord.gg/brainiac">Brainiac</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://discord.com/invite/XRyNqtFZcq">Colloquiallum</a></li>
+<li><a href="https://discord.com/invite/philosophy" target="_blank" rel="noopener noreferrer">The Philosophy Chat</a></li>
+<li><a href="https://discord.com/invite/thephilosophycafe" target="_blank" rel="noopener noreferrer">The Philosophy Cafe</a></li>
+<li><a href="https://discord.gg/brainiac" target="_blank" rel="noopener noreferrer">Brainiac</a></li>
+<li><a href="https://discord.com/invite/XRyNqtFZcq" target="_blank" rel="noopener noreferrer">Colloquiallum</a></li>
 </ul>
 </li>
 <li>Other:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://fediphilosophy.org/">FediPhilosophy (Mastodon Instance)</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://zirk.us/">zirk.us (Arts &amp; Humanities Mastodon)</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://hcommons.social/">hcommons.social (Humanities Commons Mastodon)</a></li>
+<li><a href="https://fediphilosophy.org/" target="_blank" rel="noopener noreferrer">FediPhilosophy (Mastodon Instance)</a></li>
+<li><a href="https://zirk.us/" target="_blank" rel="noopener noreferrer">zirk.us (Arts &amp; Humanities Mastodon)</a></li>
+<li><a href="https://hcommons.social/" target="_blank" rel="noopener noreferrer">hcommons.social (Humanities Commons Mastodon)</a></li>
 </ul>
 </li>
-<li>You can also interact through <a target="_blank" rel="noopener noreferrer" href="https://github.com/hocbigg/philosophy/issues">GitHub issues</a>. If there is a problem with a course, or a change needs to be made to the curriculum, this is the place to start the conversation. Read more <a href="/CONTRIBUTING.html">here</a>.</li>
-<li>
-<p>Join our Discord server (for discussions around this and other curricula): </p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://discord.gg/KHqAv4Nvm5"><img alt="discord link" src="/assets/discord.png" /></a></p>
-</li>
+<li>You can also interact through <a href="https://github.com/hocbigg/philosophy/issues" target="_blank" rel="noopener noreferrer">GitHub issues</a>. If there is a problem with a course, or a change needs to be made to the curriculum, this is the place to start the conversation. Read more <a href="/CONTRIBUTING.html">here</a>.</li>
 </ul>
-<h1 id="curriculum">Curriculum</h1>
-<ul>
-<li><a href="#orientation-and-philosophical-tools">Orientation and Philosophical Tools</a></li>
-<li><a href="#historical-foundations-of-philosophy-western">Historical Foundations of Philosophy Western</a></li>
-<li><a href="#systematic-core-fields">Systematic Core Fields</a></li>
-</ul>
-<h2 id="orientation-and-philosophical-tools">Orientation and Philosophical Tools</h2>
-<p>Purpose: Introduce philosophy as a discipline, its methods, and the basic tools required for all further study.</p>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book / Text</th>
-<th>Online Resource</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Introduction to Philosophy</td>
-<td><a target="_blank" rel="noopener noreferrer" href="http://www.gutenberg.org/ebooks/5827"><em>The Problems of Philosophy</em> — Bertrand Russell</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-00-introduction-to-philosophy-fall-2013/">MIT OpenCourseWare – Introduction to Philosophy</a></td>
-</tr>
-<tr>
-<td>Philosophical Methods and Argumentation</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://global.oup.com/academic/product/think-9780192854216"><em>Think</em> — Simon Blackburn</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/methodology/">Stanford Encyclopedia of Philosophy – “Philosophical Method”</a></td>
-</tr>
-<tr>
-<td>Logic and Critical Reasoning (Foundational)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://open.umn.edu/opentextbooks/textbooks/937"><em>Introduction to Philosophy: Logic</em> (Open Textbook)</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/">MIT OCW – Logic I</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="historical-foundations-of-philosophy-western">Historical Foundations of Philosophy (Western)</h2>
-<p>Purpose: Understand philosophy through its major historical developments before abstraction into fields.</p>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book / Text</th>
-<th>Online Resource</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ancient Philosophy</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/earlygreekphilos00barn">Jonathan Barnes – <em>Early Greek Philosophy</em> (Archive.org)</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://oyc.yale.edu/philosophy/phil-181">Yale Open Courses – Ancient Philosophy</a></td>
-</tr>
-<tr>
-<td>Medieval Philosophy</td>
-<td>SEP entries on Augustine, Aquinas, Avicenna (curated reading list)</td>
-<td><a target="_blank" rel="noopener noreferrer" href="http://podcasts.ox.ac.uk/series/medieval-philosophy">Oxford Podcasts – Medieval Philosophy</a></td>
-</tr>
-<tr>
-<td>Early Modern Philosophy</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/modernphi00arie"><em>Modern Philosophy: An Anthology of Primary Sources</em> (Archive.org)</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://oyc.yale.edu/philosophy/phil-176">Yale Open Courses – Early Modern Philosophy</a></td>
-</tr>
-<tr>
-<td>Nineteenth &amp; Twentieth Century Philosophy</td>
-<td>SEP entries on Kant, Hegel, Nietzsche, Wittgenstein</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://oyc.yale.edu/philosophy/phil-181">Yale Open Courses – Philosophy and the Science of Human Nature</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="systematic-core-fields">Systematic Core Fields</h2>
-<p>Purpose: Study philosophy by domain, informed by historical foundations.</p>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Book / Text</th>
-<th>Online Resource</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ethics</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/nicomacheanethic0000aris">Aristotle – <em>Nicomachean Ethics</em> (Archive.org)</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/playlist?list=PL30C13C91CFFEFEA6">Harvard – Justice</a></td>
-</tr>
-<tr>
-<td>Political Philosophy</td>
-<td>Plato – <em>Republic</em> (selections) + SEP Political Philosophy</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://oyc.yale.edu/political-science/plsc-114">Yale Open Courses – Introduction to Political Philosophy</a></td>
-</tr>
-<tr>
-<td>Epistemology</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://global.oup.com/academic/product/knowledge-a-very-short-introduction-9780199661268"><em>Knowledge: A Very Short Introduction</em> — Jennifer Nagel</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-211-theory-of-knowledge-spring-2014/">MIT OCW – Theory of Knowledge (closest match for Epistemology)</a></td>
-</tr>
-<tr>
-<td>Metaphysics</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/metaphysics-an-introduction-alyssa-ney">Alyssa Ney – <em>Metaphysics: An Introduction</em> (Archive.org)</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.open.edu/openlearn/history-the-arts/philosophy/introducing-philosophy">Open University – Introducing Philosophy</a></td>
-</tr>
-<tr>
-<td>Philosophy of Mind</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/isbn_9780190640859"><em>Philosophy of Mind: Classical and Contemporary Readings</em> (Archive.org)</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="http://podcasts.ox.ac.uk/series/philosophy-mind">Oxford – Philosophy of Mind</a></td>
-</tr>
-<tr>
-<td>Philosophy of Religion</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/philosophy-religion/">SEP – Philosophy of Religion</a></td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://oyc.yale.edu/philosophy/phil-176">Yale Open Courses – Philosophy of Religion</a></td>
-</tr>
-</tbody>
-</table>
-<h1 id="code-of-conduct">Code of conduct</h1>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/hocbigg/code-of-conduct">Hocbigg's code of conduct</a>.</p>
-</article>
-</main>
+<h2 id="curriculum">Curriculum</h2>
+<h3 id="introduction-to-philosophy">Introduction to Philosophy</h3>
+<p>Surveys foundational questions regarding reality, knowledge, consciousness, personal identity, and the examined life.</p>
+<p><a href="https://www.gutenberg.org/ebooks/5827" target="_blank" rel="noopener noreferrer">The Problems of Philosophy (Bertrand Russell / Project Gutenberg)</a> - A concise, public-domain foundational text focusing on the distinction between appearance and reality, the limits of knowledge, and the intrinsic value of philosophical contemplation.</p>
+<p><a href="https://books.google.com/books?isbn=9780192854216" target="_blank" rel="noopener noreferrer">Think: A Compelling Introduction to Philosophy (Simon Blackburn / Oxford University Press)</a> - A modern, highly accessible thematic alternative to Russell, exploring central problems such as free will, mind-body interaction, God, and moral reasoning.</p>
+<p><a href="https://oyc.yale.edu/philosophy/phil-181" target="_blank" rel="noopener noreferrer">Philosophy and the Science of Human Nature (Open Yale Courses / Tamar Szabo Gendler)</a> - A video lecture course pairing canonical philosophical texts from Plato, Aristotle, and Mill with contemporary cognitive science and psychology; ideal as a multimedia companion to either introductory book.</p>
+<h3 id="critical-reasoning-and-informal-logic">Critical Reasoning and Informal Logic</h3>
+<p>Covers the identification, diagramming, and evaluation of everyday natural-language arguments, with emphasis on deductive validity, inductive strength, and common informal fallacies.</p>
+<p><a href="https://podcasts.ox.ac.uk/series/critical-reasoning-beginners" target="_blank" rel="noopener noreferrer">Critical Reasoning for Beginners (University of Oxford Podcasts / Marianne Talbot)</a> - A foundational six-part audio lecture series that guides beginners through recognizing arguments, parsing premises and conclusions, and avoiding standard fallacies.</p>
+<p><a href="https://open.umn.edu/opentextbooks/textbooks/937" target="_blank" rel="noopener noreferrer">Introduction to Philosophy: Logic (Open Textbook Library / Rebus Community)</a> - An open-access introductory reader that reinforces argument analysis, fallacy detection, and the transition toward formal methods; designed to be read alongside Talbot's lectures.</p>
+<h3 id="formal-logic">Formal Logic</h3>
+<p>Introduces formal deductive systems, symbolic propositional logic, truth tables, natural deduction proofs, and basic first-order predicate calculus.</p>
+<p><a href="https://www.fecundity.com/logic/" target="_blank" rel="noopener noreferrer">forall x: An Introduction to Formal Logic (P.D. Magnus)</a> - A standard open-access textbook covering truth-functional propositional logic, formal semantics, and natural deduction proofs.</p>
+<p><a href="https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/" target="_blank" rel="noopener noreferrer">Logic I (MIT OpenCourseWare / Jack Spencer)</a> - A complete university-level introductory formal logic course providing lecture handouts, problem sets, and exams; complements the <em>forall x</em> text with structured exercises.</p>
+<h3 id="ancient-greek-philosophy">Ancient Greek Philosophy</h3>
+<p>Examines the origins of Western philosophy in classical Greece, centering on the Presocratics, Socrates, Plato, and Aristotle.</p>
+<p><a href="https://books.google.com/books?isbn=9781624665325" target="_blank" rel="noopener noreferrer">Readings in Ancient Greek Philosophy: From Thales to Aristotle (S. Marc Cohen, Patricia Curd, &amp; C.D.C. Reeve, eds. / Hackett Publishing)</a> - The canonical undergraduate survey anthology containing primary translations, introductory overviews, and explanatory notes from the Milesians through Aristotle.</p>
+<p><a href="http://classics.mit.edu/" target="_blank" rel="noopener noreferrer">The Internet Classics Archive (MIT)</a> - A free public-domain collection providing direct access to Benjamin Jowett's translations of Plato's dialogues (including the <em>Apology</em>, <em>Crito</em>, <em>Meno</em>, and <em>Republic</em>) and Aristotle's major treatises; an open alternative to commercial anthologies.</p>
+<p><a href="https://ocw.mit.edu/courses/24-200-ancient-philosophy-fall-2004/" target="_blank" rel="noopener noreferrer">Ancient Philosophy (MIT OpenCourseWare / Sally Haslanger)</a> - A structured course framework with syllabi, reading schedules, and lecture notes covering early Greek metaphysics, epistemology, and virtue theory.</p>
+<p><a href="https://www.youtube.com/playlist?list=PL9GwT4_YRZdBf9nIUHs0zjrnUVl-KBNSM" target="_blank" rel="noopener noreferrer">A History of Philosophy: Lectures 1 to 24 (Wheaton College / Arthur Holmes)</a> - An in-depth recorded classroom lecture series tracing Western thought chronologically from Thales to Hellenistic philosophy; use as a sequential narrative lecture companion to the primary readings.</p>
+<h3 id="early-modern-philosophy">Early Modern Philosophy</h3>
+<p>Studies the profound philosophical revolution from Descartes through Kant, focusing on the debates between rationalism and empiricism concerning knowledge, substance, and causation.</p>
+<p><a href="https://books.google.com/books?isbn=9780872209787" target="_blank" rel="noopener noreferrer">Modern Philosophy: An Anthology of Primary Sources (Roger Ariew &amp; Eric Watkins, eds. / Hackett Publishing)</a> - The standard academic collection containing the primary texts of Descartes, Spinoza, Leibniz, Locke, Berkeley, Hume, and Kant.</p>
+<p><a href="https://www.earlymoderntexts.com/" target="_blank" rel="noopener noreferrer">Early Modern Texts (Jonathan Bennett)</a> - A freely accessible repository featuring modern-spelling, lightly annotated editions of essential early modern works designed to make historical syntax and terminology accessible to self-taught readers.</p>
+<p><a href="https://podcasts.ox.ac.uk/series/general-philosophy" target="_blank" rel="noopener noreferrer">General Philosophy (University of Oxford Podcasts / Peter Millican)</a> - An eight-week introductory lecture series tracing modern epistemology and metaphysics through Descartes, Locke, Berkeley, and Hume.</p>
+<p><a href="https://www.youtube.com/playlist?list=PL9GwT4_YRZdBf9nIUHs0zjrnUVl-KBNSM" target="_blank" rel="noopener noreferrer">A History of Philosophy: Lectures 32 to 54 (Wheaton College / Arthur Holmes)</a> - Builds on Holmes's ancient series, providing exhaustive historical lectures covering the continental rationalists, British empiricists, and the Kantian critical philosophy.</p>
+<h3 id="epistemology">Epistemology</h3>
+<p>Investigates the nature, sources, and scope of knowledge, justified belief, perception, skepticism, and the analysis of truth.</p>
+<p><a href="https://books.google.com/books?isbn=9780199661268" target="_blank" rel="noopener noreferrer">Knowledge: A Very Short Introduction (Jennifer Nagel / Oxford University Press)</a> - A concise, lucid introduction to the foundational concepts of epistemology, including Gettier problems, skepticism, reliabilism, and contextualism.</p>
+<p><a href="https://ocw.mit.edu/courses/24-211-theory-of-knowledge-spring-2014/" target="_blank" rel="noopener noreferrer">Theory of Knowledge (MIT OpenCourseWare / Declan Smithies)</a> - A structured university syllabus with reading lists, paper topics, and lecture handouts examining skepticism, perceptual justification, and responses to Moore and Descartes; best studied after reading Nagel.</p>
+<h3 id="metaphysics">Metaphysics</h3>
+<p>Investigates the fundamental structure of reality, including existence, universals, substance, causation, time, persistence, and modal necessity.</p>
+<p><a href="https://books.google.com/books?isbn=9780815350491" target="_blank" rel="noopener noreferrer">Metaphysics: An Introduction (Alyssa Ney / Routledge)</a> - A comprehensive, rigorous introductory textbook covering contemporary ontology, persistence through time, mind-body physicalism, causation, and possible worlds.</p>
+<p><a href="https://www.coursera.org/learn/metaphysics" target="_blank" rel="noopener noreferrer">Reality Bites: Introduction to Metaphysics (Coursera / Erasmus University Rotterdam / Tim De Mey)</a> - A structured, free-to-audit video course that introduces core metaphysical puzzles—such as universals, substance, persistence, and composition—using intuitive analogies; ideal to take concurrently with Ney's textbook.</p>
+<h3 id="ethics">Ethics</h3>
+<p>Analyzes moral theory and normativity, focusing on metaethics, the three major normative frameworks (utilitarianism, deontology, and virtue ethics), and applied ethical problems.</p>
+<p><a href="https://books.google.com/books?isbn=9780197697474" target="_blank" rel="noopener noreferrer">The Fundamentals of Ethics (Russ Shafer-Landau / Oxford University Press)</a> - The most widely assigned undergraduate ethics textbook, notable for its clear reconstructive arguments evaluating hedonism, utilitarianism, Kantian ethics, social contract theory, and moral realism.</p>
+<p><a href="https://www.youtube.com/playlist?list=PL30C13C91CFFEFEA6" target="_blank" rel="noopener noreferrer">Justice with Michael Sandel (Harvard University)</a> - A full-semester Harvard video course introducing moral and political philosophy by confronting students with classic dilemmas and theoretical critiques from Aristotle, Kant, and Mill; serves as an engaging audio-visual counterpart to Shafer-Landau.</p>
+<h3 id="political-philosophy">Political Philosophy</h3>
+<p>Examines the legitimacy of the state, political authority, liberty, justice, property distribution, and the rights and duties of citizens.</p>
+<p><a href="https://books.google.com/books?isbn=9780192847904" target="_blank" rel="noopener noreferrer">An Introduction to Political Philosophy (Jonathan Wolff / Oxford University Press)</a> - A foundational, problem-oriented introduction organized around central questions: the state of nature, the justification of political power, the distribution of property, and the demands of democracy.</p>
+<p><a href="https://oyc.yale.edu/political-science/plsc-114" target="_blank" rel="noopener noreferrer">Introduction to Political Philosophy (Open Yale Courses / Steven B. Smith)</a> - A complete university lecture series walking through seminal political treatises from Plato and Aristotle to Machiavelli, Hobbes, Locke, Rousseau, and Tocqueville; intended to be used alongside Wolff's topical text.</p>
+<h3 id="philosophy-of-mind">Philosophy of Mind</h3>
+<p>Studies the relationship between the mental and the physical, the nature of consciousness, intentionality, functionalism, and artificial intelligence.</p>
+<p><a href="https://books.google.com/books?isbn=9780195145816" target="_blank" rel="noopener noreferrer">Philosophy of Mind: Classical and Contemporary Readings (David J. Chalmers, ed. / Oxford University Press)</a> - The definitive anthology in the field, gathering essential primary texts on dualism, behaviorism, identity theory, functionalism, qualia, and the explanatory gap.</p>
+<p><a href="https://ocw.mit.edu/courses/24-09-minds-and-machines-fall-2011/" target="_blank" rel="noopener noreferrer">Minds and Machines (MIT OpenCourseWare / Alex Byrne)</a> - A structured course with detailed lecture notes, study materials, and syllabi exploring the Chinese Room argument, functionalism, and physicalist theories of consciousness; works as a syllabus guide through the Chalmers reader.</p>
+<p><a href="https://www.youtube.com/playlist?list=PL553DCA4DB88B0408" target="_blank" rel="noopener noreferrer">Philosophy of Mind Lectures (UC Berkeley / John Searle)</a> - An audio lecture course covering intentionality, dualism, behaviorism, and consciousness directly from one of the discipline's most influential contributors; provides an alternative, conversational lecture format to Byrne's course notes.</p>
+    </article>
+  </main>
 
 </body>
 </html>

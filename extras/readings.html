@@ -1,129 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Great Readings</title>
-<link rel="stylesheet" href="/philosophy/style.css">
-<meta name="description" content="">
+  <title>Great Readings</title>
+  <meta name="description" content="A lightweight static page by hocbigg.">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/philosophy/">
+  <link rel="canonical" href="https://hocbigg.github.io/philosophy/extras/readings.html">
+  <meta property="og:title" content="Great Readings">
+  <meta property="og:description" content="A lightweight static page by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/philosophy/extras/readings.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Great Readings">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/philosophy/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/philosophy/">Philosophy</a>
-<a href="/philosophy/advanced_topics.html">Advanced Topics</a>
-<a href="/philosophy/projects.html">Projects</a>
-<a href="/philosophy/extras/courses.html">Extra Courses</a>
-<a href="/philosophy/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/philosophy/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/philosophy/">Philosophy</a></li>
+      <li><a href="/philosophy/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/philosophy/projects.html">Projects</a></li>
+      <li><a href="/philosophy/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/philosophy/extras/courses.html">Extra Courses</a></li>
+      <li><a href="/philosophy/extras/other_curricula.html">Other Curricula</a></li>
+      <li><a href="https://github.com/hocbigg/philosophy" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
 
 <h1 id="great-readings">Great Readings</h1>
-<p>This document consists of great books or articles on Philosophy.
-Some are here because there is a course covering the same material;
-some are just great books that you should read at some point in your career.</p>
-<p>Once you have made it through most of the curriculum, knowing whether a book is worth your time will become easier.
-Or, if you are struggling in one of the courses, perhaps reading a book on the subject will help.</p>
-<table>
+<p>A curated collection of field-defining monographs, seminal essays, and landmark philosophical breakthroughs. These works demonstrate how major thinkers formulate transformative paradigms, challenge conventional dogmas, and construct rigorous arguments.</p>
+<ul>
+<li><a href="#epistemology-metaphysics-and-mind">Epistemology, Metaphysics, and Mind</a></li>
+<li><a href="#ethics-value-theory-and-moral-psychology">Ethics, Value Theory, and Moral Psychology</a></li>
+<li><a href="#political-social-and-legal-philosophy">Political, Social, and Legal Philosophy</a></li>
+<li><a href="#language-logic-and-philosophy-of-science">Language, Logic, and Philosophy of Science</a></li>
+<li><a href="#continental-philosophy-phenomenology-and-critical-theory">Continental Philosophy, Phenomenology, and Critical Theory</a></li>
+</ul>
+<h2 id="epistemology-metaphysics-and-mind">Epistemology, Metaphysics, and Mind</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: center;">Author(s)</th>
+<th style="text-align: left;">Title</th>
+<th style="text-align: left;">Author(s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><em>A History of Western Philosophy</em></td>
-<td style="text-align: center;">Anthony Kenny</td>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/70091" target="_blank" rel="noopener noreferrer"><em>Six Metaphysical Meditations</em></a></td>
+<td style="text-align: left;">René Descartes</td>
 </tr>
 <tr>
-<td style="text-align: left;"><em>The Oxford Handbook of Philosophy</em> (various volumes by subfield)</td>
-<td style="text-align: center;">Oxford University Press</td>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/9662" target="_blank" rel="noopener noreferrer"><em>An Enquiry Concerning Human Understanding</em></a></td>
+<td style="text-align: left;">David Hume</td>
 </tr>
 <tr>
-<td style="text-align: left;"><em>The Elements of Philosophy</em></td>
-<td style="text-align: center;">Tamar Gendler (ed.)</td>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/4280" target="_blank" rel="noopener noreferrer"><em>The Critique of Pure Reason</em></a></td>
+<td style="text-align: left;">Immanuel Kant</td>
 </tr>
 <tr>
-<td style="text-align: left;"><em>Mind and World</em></td>
-<td style="text-align: center;">John McDowell</td>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/3800" target="_blank" rel="noopener noreferrer"><em>Ethics</em></a></td>
+<td style="text-align: left;">Benedict de Spinoza</td>
 </tr>
 <tr>
-<td style="text-align: left;"><em>Reasons and Persons</em></td>
-<td style="text-align: center;">Derek Parfit</td>
+<td style="text-align: left;"><a href="https://www.ditext.com/gettier/gettier.html" target="_blank" rel="noopener noreferrer"><em>Is Justified True Belief Knowledge?</em></a></td>
+<td style="text-align: left;">Edmund Gettier</td>
 </tr>
 <tr>
-<td style="text-align: left;"><em>The Conscious Mind</em></td>
-<td style="text-align: center;">David Chalmers</td>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780415485470" target="_blank" rel="noopener noreferrer"><em>The Concept of Mind</em></a></td>
+<td style="text-align: left;">Gilbert Ryle</td>
 </tr>
 <tr>
-<td style="text-align: left;"><em>The Problems of Philosophy</em> (free)</td>
-<td style="text-align: center;">Bertrand Russell</td>
+<td style="text-align: left;"><a href="https://www.sas.upenn.edu/~cavitch/pdf-library/Nagel_Bat.pdf" target="_blank" rel="noopener noreferrer"><em>What Is It Like to Be a Bat?</em></a></td>
+<td style="text-align: left;">Thomas Nagel</td>
 </tr>
 <tr>
-<td style="text-align: left;"><em>An Enquiry Concerning Human Understanding</em> (free)</td>
-<td style="text-align: center;">David Hume</td>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780195117899" target="_blank" rel="noopener noreferrer"><em>The Conscious Mind: In Search of a Fundamental Theory</em></a></td>
+<td style="text-align: left;">David J. Chalmers</td>
 </tr>
 <tr>
-<td style="text-align: left;"><em>Meditations on First Philosophy</em> (free)</td>
-<td style="text-align: center;">René Descartes</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>Being and Time</em></td>
-<td style="text-align: center;">Martin Heidegger</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>The Second Sex</em></td>
-<td style="text-align: center;">Simone de Beauvoir</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>The Ethics</em></td>
-<td style="text-align: center;">Benedict de Spinoza</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>The Concept of Mind</em></td>
-<td style="text-align: center;">Gilbert Ryle</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>On Liberty</em> (free)</td>
-<td style="text-align: center;">John Stuart Mill</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>The Republic</em> (free)</td>
-<td style="text-align: center;">Plato</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>Critique of Pure Reason</em></td>
-<td style="text-align: center;">Immanuel Kant</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>The Cambridge Dictionary of Philosophy</em></td>
-<td style="text-align: center;">Audi (ed.)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>The Stanford Encyclopedia of Philosophy</em> (free)</td>
-<td style="text-align: center;">N/A</td>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780674576100" target="_blank" rel="noopener noreferrer"><em>Mind and World</em></a></td>
+<td style="text-align: left;">John McDowell</td>
 </tr>
 </tbody>
-</table>
-</article>
-</main>
+</table></div>
+<h2 id="ethics-value-theory-and-moral-psychology">Ethics, Value Theory, and Moral Psychology</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Title</th>
+<th style="text-align: left;">Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/8438" target="_blank" rel="noopener noreferrer"><em>The Nicomachean Ethics of Aristotle</em></a></td>
+<td style="text-align: left;">Aristotle</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/5682" target="_blank" rel="noopener noreferrer"><em>Fundamental Principles of the Metaphysic of Morals</em></a></td>
+<td style="text-align: left;">Immanuel Kant</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/11224" target="_blank" rel="noopener noreferrer"><em>Utilitarianism</em></a></td>
+<td style="text-align: left;">John Stuart Mill</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780190264048" target="_blank" rel="noopener noreferrer"><em>Famine, Affluence, and Morality</em></a></td>
+<td style="text-align: left;">Peter Singer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780674769816" target="_blank" rel="noopener noreferrer"><em>Rights, Restitution, and Risk: Essays in Moral Theory</em></a></td>
+<td style="text-align: left;">Judith Jarvis Thomson</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780198249085" target="_blank" rel="noopener noreferrer"><em>Reasons and Persons</em></a></td>
+<td style="text-align: left;">Derek Parfit</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780674004238" target="_blank" rel="noopener noreferrer"><em>What We Owe to Each Other</em></a></td>
+<td style="text-align: left;">T. M. Scanlon</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="political-social-and-legal-philosophy">Political, Social, and Legal Philosophy</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Title</th>
+<th style="text-align: left;">Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/1497" target="_blank" rel="noopener noreferrer"><em>The Republic</em></a></td>
+<td style="text-align: left;">Plato</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/3207" target="_blank" rel="noopener noreferrer"><em>Leviathan</em></a></td>
+<td style="text-align: left;">Thomas Hobbes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/7370" target="_blank" rel="noopener noreferrer"><em>Second Treatise of Government</em></a></td>
+<td style="text-align: left;">John Locke</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/34901" target="_blank" rel="noopener noreferrer"><em>On Liberty</em></a></td>
+<td style="text-align: left;">John Stuart Mill</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780674000780" target="_blank" rel="noopener noreferrer"><em>A Theory of Justice</em></a></td>
+<td style="text-align: left;">John Rawls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780465051007" target="_blank" rel="noopener noreferrer"><em>Anarchy, State, and Utopia</em></a></td>
+<td style="text-align: left;">Robert Nozick</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780801484636" target="_blank" rel="noopener noreferrer"><em>The Racial Contract</em></a></td>
+<td style="text-align: left;">Charles W. Mills</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="language-logic-and-philosophy-of-science">Language, Logic, and Philosophy of Science</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Title</th>
+<th style="text-align: left;">Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://www.gutenberg.org/ebooks/5740" target="_blank" rel="noopener noreferrer"><em>Tractatus Logico-Philosophicus</em></a></td>
+<td style="text-align: left;">Ludwig Wittgenstein</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9781405159289" target="_blank" rel="noopener noreferrer"><em>Philosophical Investigations</em></a></td>
+<td style="text-align: left;">Ludwig Wittgenstein</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.ditext.com/quine/quine.html" target="_blank" rel="noopener noreferrer"><em>Two Dogmas of Empiricism</em></a></td>
+<td style="text-align: left;">W. V. O. Quine</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.csee.umbc.edu/courses/471/papers/turing.pdf" target="_blank" rel="noopener noreferrer"><em>Computing Machinery and Intelligence</em></a></td>
+<td style="text-align: left;">Alan M. Turing</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780674598461" target="_blank" rel="noopener noreferrer"><em>Naming and Necessity</em></a></td>
+<td style="text-align: left;">Saul A. Kripke</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780226458120" target="_blank" rel="noopener noreferrer"><em>The Structure of Scientific Revolutions</em></a></td>
+<td style="text-align: left;">Thomas S. Kuhn</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780198244271" target="_blank" rel="noopener noreferrer"><em>The Scientific Image</em></a></td>
+<td style="text-align: left;">Bas C. van Fraassen</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="continental-philosophy-phenomenology-and-critical-theory">Continental Philosophy, Phenomenology, and Critical Theory</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Title</th>
+<th style="text-align: left;">Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780061575594" target="_blank" rel="noopener noreferrer"><em>Being and Time</em></a></td>
+<td style="text-align: left;">Martin Heidegger</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780415834339" target="_blank" rel="noopener noreferrer"><em>Phenomenology of Perception</em></a></td>
+<td style="text-align: left;">Maurice Merleau-Ponty</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780307265562" target="_blank" rel="noopener noreferrer"><em>The Second Sex</em></a></td>
+<td style="text-align: left;">Simone de Beauvoir</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780804736336" target="_blank" rel="noopener noreferrer"><em>Dialectic of Enlightenment</em></a></td>
+<td style="text-align: left;">Max Horkheimer &amp; Theodor W. Adorno</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780679752554" target="_blank" rel="noopener noreferrer"><em>Discipline and Punish: The Birth of the Prison</em></a></td>
+<td style="text-align: left;">Michel Foucault</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://books.google.com/books?isbn=9780199570522" target="_blank" rel="noopener noreferrer"><em>Epistemic Injustice: Power and the Ethics of Knowing</em></a></td>
+<td style="text-align: left;">Miranda Fricker</td>
+</tr>
+</tbody>
+</table></div>
+    </article>
+  </main>
 
 </body>
 </html>
